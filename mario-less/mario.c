@@ -18,6 +18,7 @@ int main(void)
 
         for (int height = 0;height <10;height++)
         {
+            printf("#\n");
 
         }
 
