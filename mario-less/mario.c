@@ -12,5 +12,11 @@ int main(void)
     counter = counter-1
     Go new line}
 
+    do
+    {
+        height=get_int("Positive Number: ")
+
+    }
+    while 
 
 }
