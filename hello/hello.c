@@ -12,4 +12,4 @@ int main(void)
 string name = get_string("What's your name? ");
 
 //program greets with user's name
-printf(hello, % s\n", name);
+//printf(hello, % s\n", name);
