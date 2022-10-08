@@ -16,7 +16,7 @@ int main(void)
     {
         height=get_int("Positive Number: ")
 
-        for (initialisation;condition;update)
+        for (int height = 0;height <10;height++)
         {
 
         }
