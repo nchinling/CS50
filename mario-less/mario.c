@@ -15,7 +15,11 @@ int main(void)
     do
     {
         height=get_int("Positive Number: ")
-        
+
+        for (initialisation;condition;update)
+        {
+
+        }
 
     }
     while (n>=1 && n<=8)
