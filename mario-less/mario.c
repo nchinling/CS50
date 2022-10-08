@@ -8,15 +8,16 @@ int main(void)
     if height < 0
 
     while (height!=0)
-    {print *
+    {print #
     counter = counter-1
     Go new line}
 
     do
     {
         height=get_int("Positive Number: ")
+        
 
     }
-    while (n<1 & n<8)
+    while (n>=1 && n<=8)
 
 }
