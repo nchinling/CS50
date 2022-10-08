@@ -1,1 +1,3 @@
-Obtain input from user. 
+Obtain height from user.
+If height < 0, get height again
+If height > 0, get height again
