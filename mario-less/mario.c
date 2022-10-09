@@ -14,7 +14,7 @@ int main(void)
     }
     while (height<1 || height>8);     //user will be reprompted for height
 
-    //build left-aligned hashes
+    //styling
     printf(" \n");
 
 //to iterate rows
