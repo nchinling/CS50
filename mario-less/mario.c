@@ -11,12 +11,12 @@ int main(void)
         height=get_int("Positive Number: ");
 
 
-            printf(int height\n);
+            printf("%d",height);
 
         }
 
     }
-    while (n<1 && n>8)     //user will be reprompted for height
+    while (n<1 && n>8);     //user will be reprompted for height
 
         //for (int height = 0;height <10;height++)
         //{
