@@ -5,7 +5,7 @@ int main(void)
 {
     do
     {
-        height=get_int("Positive Number: ")
+        int height=get_int("Positive Number: ")
 
         for (int height = 0;height <10;height++)
         {
