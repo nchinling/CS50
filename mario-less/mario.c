@@ -3,6 +3,8 @@
 
 int main(void)
 {
+
+    //get height that mario needs to climb
     do
     {
         int height=get_int("Positive Number: ")
