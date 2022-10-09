@@ -15,7 +15,7 @@ int main(void)
     while (height<1 || height>8);     //user will be reprompted for height
 
     //styling
-    //printf(" \n");
+    printf(" \n");
 
 //to iterate rows
 for (int i=0;i < height;i++)
@@ -33,6 +33,6 @@ for (int i=0;i < height;i++)
 
         printf(" \n");  //move to next row after printing the colummns
         }
-//printf(" \n");  //empty space for styling purpose
+printf(" \n");  //empty space for styling purpose
 
 }
