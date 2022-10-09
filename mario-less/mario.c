@@ -16,11 +16,14 @@ int main(void)
     }
     while (height<1 || height>8);     //user will be reprompted for height
 
-        //for (int height = 0;height <10;height++)
-        //{
-           // #printf("#\n");
+    //build left-aligned hashes
 
-        //}
+
+        for (height = 0;height <8;height++)
+        {
+           #printf("#\n");
+
+        }
 
 //int height =getint("Height:" %i)
 
