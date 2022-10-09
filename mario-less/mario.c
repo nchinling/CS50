@@ -8,11 +8,11 @@ int main(void)
     //get height that mario needs to climb. Do-while lopp will execute at least once.
     do
     {
-        height=get_int("Height: ");
+        height = get_int("Height: ");
 
 
     }
-    while (height<1 || height>8);     //user will be reprompted for height
+    while (height < 1 || height > 8); //user will be reprompted for height
 
     //styling
     printf(" \n");
