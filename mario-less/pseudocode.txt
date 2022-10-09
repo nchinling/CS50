@@ -1,3 +1,5 @@
 Obtain height from user.
-If height < 0, get height again
-If height > 0, get height again
+Get height again if height<1 or height>8
+
+
+
