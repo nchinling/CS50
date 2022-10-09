@@ -11,7 +11,7 @@ int main(void)
         height=get_int("Positive Number: ");
 
 
-            printf("The height is %d",height);
+            printf("The height is %d"\n,height);
 
     }
     while (height<1 || height>8);     //user will be reprompted for height
