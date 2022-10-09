@@ -18,13 +18,17 @@ int main(void)
 
     //build left-aligned hashes
 
+for (int i=0;i <height;i++)
+        {
 
-        for (int i=0;i <height;i++)
+        for (int j=0;j <height;j++)
         {
            printf("#");
 
         }
-        printf(" \n");
+
+        }
+//printf(" \n");
 //int height =getint("Height:" %i)
 
     //if height < 0
