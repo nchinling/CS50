@@ -4,20 +4,24 @@
 int main(void)
 {
 
-    //get height that mario needs to climb
+    //get height that mario needs to climb. Do-while lopp will execute at least once.
     do
     {
-        int height=get_int("Positive Number: ")
+        int height=get_int("Positive Number: "); 
 
-        for (int height = 0;height <10;height++)
-        {
-            printf("#\n");
+
+            printf(int height\n);
 
         }
 
     }
-    while (n<1 && n>8)
+    while (n<1 && n>8)     //user will be reprompted for height
 
+        //for (int height = 0;height <10;height++)
+        //{
+            #printf("#\n");
+
+        //}
 
 //int height =getint("Height:" %i)
 
