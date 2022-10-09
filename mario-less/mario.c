@@ -33,6 +33,6 @@ for (int i=0;i < height;i++)
 
         printf(" \n");  //move to next row after printing the colummns
         }
-printf(" \n");  //empty space for styling purpose
+//printf(" \n");  //empty space for styling purpose
 
 }
