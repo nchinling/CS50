@@ -3,11 +3,12 @@
 
 int main(void)
 {
+    int height; //declare variable height
 
     //get height that mario needs to climb. Do-while lopp will execute at least once.
     do
     {
-        int height=get_int("Positive Number: "); 
+        height=get_int("Positive Number: ");
 
 
             printf(int height\n);
