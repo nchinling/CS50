@@ -11,7 +11,6 @@ int main(void)
         height=get_int("Enter positive integer between 1 and 8: ");
 
 
-
     }
     while (height<1 || height>8);     //user will be reprompted for height
 
