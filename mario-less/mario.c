@@ -3,15 +3,6 @@
 
 int main(void)
 {
-    int height =getint("Height:" %i)
-
-    if height < 0
-
-    while (height!=0)
-    {print #
-    counter = counter-1
-    Go new line}
-
     do
     {
         height=get_int("Positive Number: ")
@@ -24,5 +15,16 @@ int main(void)
 
     }
     while (n<1 && n>8)
+
+
+//int height =getint("Height:" %i)
+
+    //if height < 0
+
+   // while (height!=0)
+    //{print #
+    //counter = counter-1
+    //Go new line}
+
 
 }
