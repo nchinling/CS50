@@ -13,14 +13,12 @@ int main(void)
 
             printf("%d",height);
 
-        }
-
     }
-    while (n<1 && n>8);     //user will be reprompted for height
+    while (height<1 || height>8);     //user will be reprompted for height
 
         //for (int height = 0;height <10;height++)
         //{
-            #printf("#\n");
+           // #printf("#\n");
 
         //}
 
