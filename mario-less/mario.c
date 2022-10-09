@@ -24,7 +24,7 @@ for (int i=0;i < height;i++)
         for (int j=0;j < height;j++)  //iterate columns
         {
             //if-else loop to print number of blank char followed by #
-            if(i+j>height-1)
+            if(i+j<height-1)
                 printf(" ");
             else
                 printf("#");
