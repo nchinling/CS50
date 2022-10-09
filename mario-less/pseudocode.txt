@@ -1,5 +1,9 @@
 Obtain height from user.
 Get height again if height<1 or height>8
-
-
-
+Use the height value to iterate the number of rows and columns
+For each row, starting from first column (index 0),
+If row + column is less than or equal to (height-1), print "(empty char)"
+Else print #
+Move to next column and repeat Step 5. End column iteration once column = val of height
+Move to next row. Repeat Steps 4 to 7.
+End row iteration once row = val of height
