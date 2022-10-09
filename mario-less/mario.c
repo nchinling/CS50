@@ -26,17 +26,8 @@ for (int i=0;i <height;i++)
            printf("#");
 
         }
-
+        printf(" \n");
         }
-//printf(" \n");
-//int height =getint("Height:" %i)
-
-    //if height < 0
-
-   // while (height!=0)
-    //{print #
-    //counter = counter-1
-    //Go new line}
-
+printf(" \n");
 
 }
