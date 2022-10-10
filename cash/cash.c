@@ -54,7 +54,7 @@ int calculate_quarters(int cents)
 {
     int quarters = (int)(cents/25);
 
-    return 0;
+    return quarters;
 }
 
 int calculate_dimes(int cents)
