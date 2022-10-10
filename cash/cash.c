@@ -7,13 +7,6 @@ int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
 
-int main(void)
-{
-    float amount = get_float("Dollar Amount: ");
-    int pennies = round(amount * 100);
-    printf("Pennies: %i\n", pennies);
-}
-
 
 int main(void)
 {
@@ -59,7 +52,8 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    // TODO
+    int quarters = (int)(cents/25);
+
     return 0;
 }
 
