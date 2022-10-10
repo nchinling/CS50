@@ -5,9 +5,9 @@
 
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
-//             {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q,  r, s, t, u, v, w, x, y, z}
 
-int compute_score(string word);
+
+int compute_score(string word);   //computer_score accepts string as arg and returns an integer
 
 int main(void)
 {
@@ -19,8 +19,8 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    printf("%d\n", score1);
-    printf("%d\n", score2);
+    //printf("%d\n", score1);
+    //printf("%d\n", score2);
 
     // TODO: Print the winner using if-elseif-else conditonal loop
     if  (score1 > score2)
@@ -53,30 +53,41 @@ int compute_score(string word)
 
 
     for (int i=0; i < strlen(word); i++ )
-    //for (int i = 0, n = strlen(word); i<n; i++)
+
 
     {
 
+        //change lowercase letters to uppercase
         if (islower(word[i]))
         {
 
             word[i] = toupper(word[i]);
 
         }
+
+        //retain the letter if it is already in uppercase
         else
         {
-            word[i]=word[i];
+
+            word[i] = word[i];
+
         }
 
+        //assign points only if they are letters. Other characters will be given zero points
         if (word[i]-'A' >= 0 && word[i]-'A' < 26)
+
         {
 
             sum += POINTS[word[i]-'A'];
+
         }
 
         else
+
         {
+
             sum = sum+0;
+
         }
 
     }
