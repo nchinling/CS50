@@ -43,6 +43,7 @@ int main(void)
 
 int compute_score(string word)
 {
+    
     score =
 
     // TODO: Compute and return score for string
