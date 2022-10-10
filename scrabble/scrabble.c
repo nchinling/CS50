@@ -46,15 +46,13 @@ int compute_score(string word)
 
     // TODO: Compute and return score for string
     int score = 0;
+
     for (int i=0; i < strlen[word]; i++ )
 
+    {
+        sum += word[i];
+    }
 
-    return score
+    return score;
 }
 
-
-    int sum = 0;
-    for (int i = 0; i < strlen; i++)
-    {
-        sum += array[i];
-    }
