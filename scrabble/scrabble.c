@@ -50,12 +50,13 @@ int compute_score(string word)
 
     // TODO: Compute and return score for string
     int sum = 0;
+    int score;
 
     for (int i=0; i < strlen(word); i++ )
     //for (int i = 0, n = strlen(word); i<n; i++)
 
     {
-        word = POINTS[i];
+        score = POINTS[i];
 
         sum += POINTS[i];
     }
