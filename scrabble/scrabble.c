@@ -59,7 +59,7 @@ int compute_score(string word)
 
         //sum += POINTS[i];
         //word=POINTS[];
-        sum += POINTS[i];
+        sum += POINTS[word[i]-'a'];
 
     }
 
