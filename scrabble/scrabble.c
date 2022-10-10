@@ -58,7 +58,7 @@ int compute_score(string word)
     {
 
         //sum += POINTS[];
-      
+        word[i]=POINTS[];
         sum += word[i];
 
     }
