@@ -45,7 +45,7 @@ int get_cents(void)
     {
         cents = get_int("Cents: ");
     }
-    while (cents < 1 || cents > 100); //user will be reprompted for amount
+    while (cents < 0 || cents > 100); //user will be reprompted for amount
 
     return cents;
 }
@@ -77,5 +77,5 @@ int calculate_pennies(int cents)
     int pennies = (int)(cents/1);
 
     return pennies;
-    
+
 }
