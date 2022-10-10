@@ -52,13 +52,13 @@ int compute_score(string word)
     int sum = 0;
 
 
-    //for (int i=0; i < strlen(word); i++ )
-    for (int i = 0, n = strlen(word); i<n; i++)
+    for (int i=0; i < strlen(word); i++ )
+    //for (int i = 0, n = strlen(word); i<n; i++)
 
     {
 
         //sum += POINTS[i];
-        //word[n]=POINTS[word[i]];
+        word[i]=POINTS[];
         sum += POINTS[i];
 
     }
