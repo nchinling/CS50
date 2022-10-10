@@ -23,7 +23,7 @@ int main(void)
     //printf("%d\n", score2);
 
     // TODO: Print the winner using if-elseif-else conditonal loop
-    if  (score1 > score2)
+    if (score1 > score2)
     {
 
         printf("Player 1 wins!\n");
@@ -52,7 +52,7 @@ int compute_score(string word)
     int sum = 0;
 
 
-    for (int i=0; i < strlen(word); i++ )
+    for (int i = 0; i < strlen(word); i++)
 
 
     {
@@ -74,11 +74,11 @@ int compute_score(string word)
         }
 
         //assign points only if they are letters. Other characters will be given zero points
-        if (word[i]-'A' >= 0 && word[i]-'A' < 26)
+        if (word[i] - 'A' >= 0 && word[i] - 'A' < 26)
 
         {
 
-            sum += POINTS[word[i]-'A'];
+            sum += POINTS[word[i] - 'A'];
 
         }
 
@@ -86,7 +86,7 @@ int compute_score(string word)
 
         {
 
-            sum = sum+0;
+            sum = sum + 0;
 
         }
 
