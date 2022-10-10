@@ -18,6 +18,9 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
+    printf("%d\n", score1);
+    printf("%d\n", score2);
+
     // TODO: Print the winner using if-elseif-else conditonal loop
     if  (score1 > score2)
     {
