@@ -45,14 +45,14 @@ int compute_score(string word)
 {
 
     // TODO: Compute and return score for string
-    int score = 0;
+    int sum = 0;
 
-    for (int i=0; i < strlen[4]; i++ )
+    for (int i=0; i < strlen[word]; i++ )
 
     {
         sum += POINTS[i];
     }
 
-    return score;
+    return sum;
 }
 
