@@ -68,7 +68,7 @@ int compute_score(string word)
             word[i]=word[i];
         }
 
-        for (word[i] >= 0 && word[i] < 26)
+        while (word[i] >= 0 && word[i] < 26)
         {
 
             sum += POINTS[word[i]-'A'];
@@ -77,7 +77,7 @@ int compute_score(string word)
         //else
        // {
            // sum = 0;
-        }
+       // }
 
     }
 
