@@ -59,11 +59,14 @@ int compute_score(string word)
 
         if (islower(word[i]))
         {
-            toupper(word[i]);
+
+            word[i] = toupper(word[i]);
+
         }
         else
         {
-            word[i];
+            word[i]=word[i];
+        }
 
         //sum += POINTS[i];
         //word=POINTS[];
