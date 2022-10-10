@@ -9,6 +9,14 @@ int calculate_pennies(int cents);
 
 int main(void)
 {
+    float amount = get_float("Dollar Amount: ");
+    int pennies = round(amount * 100);
+    printf("Pennies: %i\n", pennies);
+}
+
+
+int main(void)
+{
     // Ask how many cents the customer is owed
     int cents = get_cents();
    // printf("amount, %d\n", cents);
