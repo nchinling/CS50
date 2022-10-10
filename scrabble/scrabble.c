@@ -57,6 +57,14 @@ int compute_score(string word)
 
     {
 
+        if (islower(word[i]))
+        {
+            toupper(word[i]);
+        }
+        else
+        {
+            word[i];
+
         //sum += POINTS[i];
         //word=POINTS[];
         sum += POINTS[word[i]-'A'];
