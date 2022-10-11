@@ -56,7 +56,7 @@ int count_letters(string text)
 }
 
 
-//Function to count number of words. Number of words is always 1 more than punctuations. 
+//Function to count number of words. Number of words is always 1 more than punctuations.
 int count_words(string text)
 {
     int words
@@ -65,7 +65,7 @@ int count_words(string text)
     for (int i = 0; i < strlen(text); i++)
     {
 
-        if ((text[i] >= 65 && text[i] <= 90) || (text[i] >= 97 && text[i] <= 122) )
+        if (text[i] == 65 || text[i] == 90 || text[i] == 97)
 
         {
 
