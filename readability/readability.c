@@ -61,6 +61,27 @@ int count_words(string text)
 {
     int words = 0;
 
+    for (int i = 0; i < strlen(text); i++)
+    {
+
+        if ((text[i] >= 65 && text[i] <= 90) || (text[i] >= 97 && text[i] <= 122) )
+
+        {
+
+            letters++;
+
+        }
+
+        else
+
+        {
+
+            letters = letters + 0;
+
+        }
+
+    }
+
     return words;
 }
 
