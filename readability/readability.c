@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 //create function prototypes. Ends with semi-colon.
 int count_letters(string text);
