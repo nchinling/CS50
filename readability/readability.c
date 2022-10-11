@@ -27,7 +27,21 @@ printf("Grade:%d\n",index);
 int count_letters(string text)
 {
     int letters = 0;
+        if (word[i] - 'A' >= 0 && word[i] - 'A' < 26)
 
+        {
+
+            sum += POINTS[word[i] - 'A'];
+
+        }
+
+        else
+
+        {
+
+            sum = sum + 0;
+
+        }
 
 
     return letters;
