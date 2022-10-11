@@ -28,8 +28,8 @@ int main(void)
     float S = (uS/uW)*100;
      printf("S:%f\n", S);
 
-    int index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Index:%d\n",index);
+    float index = round(0.0588 * L - 0.296 * S - 15.8);
+    printf("Index:%f\n",index);
 
     if (index >= 16)
     {
@@ -48,7 +48,7 @@ int main(void)
     else
     {
 
-         printf("Grade %d\n",index);
+         printf("Grade %f\n",index);
 
     }
 
