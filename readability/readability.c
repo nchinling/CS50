@@ -6,7 +6,7 @@
 
 //create function prototypes. Ends with semi-colon.
 int count_letters(string text);
-// int count_words(string text);
+int count_words(string text);
 // int count_sentences(string text);
 
 int main(void)
@@ -17,7 +17,8 @@ int main(void)
 
     int L = count_letters(user_text);
     printf("Letters:%d\n",L);
-    // int W = count_words(user_text);
+    int W = count_words(user_text);
+    printf("Words:%d\n",W);
     // int S = count_sentences(user_text);
 
 
