@@ -27,6 +27,10 @@ printf("Grade:%d\n",index);
 int count_letters(string text)
 {
     int letters = 0;
+
+    for (int i = 0; i < strlen(text); i++)
+    {
+
         if (text[i] - 'A' >= 0 && text[i] - 'A' < 26)
 
         {
@@ -43,6 +47,11 @@ int count_letters(string text)
 
         }
 
+
+
+
+
+    }
 
     return letters;
 }
