@@ -25,6 +25,7 @@ printf(round(index));
 
 int count_letters(string text)
 {
+    
 
 
 return int
