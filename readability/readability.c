@@ -16,5 +16,11 @@ return int
 int count_words(string text)
 {
 
-return int 
+return int
+}
+
+int count_sentences(string text)
+{
+
+return int
 }
