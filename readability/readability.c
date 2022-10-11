@@ -10,7 +10,7 @@ int count_sentences(string text);
 
 int main(void)
 {
-string word = get_string("Player 1: ");
+string text = get_string("Enter text: ");
 
 index = 0.0588 * L - 0.296 * S - 15.8
 printf(round(index));
