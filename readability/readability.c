@@ -8,10 +8,12 @@ int count_letters(string word);
 int count_words(string text);
 int count_sentences(string text);
 
-int index;
+
 
 int main(void)
 {
+    int index;
+
     string user_text = get_string("Enter text: ");
 
     int L = count_letters(user_text);
@@ -19,13 +21,13 @@ int main(void)
     int S = count_strings(user_text);
 
 
-index = 0.0588 * L - 0.296 * S - 15.8;
+index = 0.0588 * 30 - 0.296 * 1 - 15.8;
 printf(round(index));
 }
 
-int count_letters(string text)
+/* int count_letters(string text)
 {
-    
+
 
 
 return int
@@ -42,3 +44,4 @@ int count_sentences(string text)
 
 return int
 }
+ */
