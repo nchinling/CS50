@@ -16,6 +16,7 @@ int main(void)
     string user_text = get_string("Enter text: ");
 
     int L = count_letters(user_text);
+    printf("Letters:%d\n",L);
     // int W = count_words(user_text);
     // int S = count_sentences(user_text);
 
@@ -35,7 +36,7 @@ int count_letters(string text)
 
         {
 
-            sum++
+            letters++;
 
         }
 
@@ -43,7 +44,7 @@ int count_letters(string text)
 
         {
 
-            sum = sum + 0;
+            letters = letters + 0;
 
         }
 
