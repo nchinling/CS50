@@ -32,7 +32,7 @@ int count_letters(string text)
     for (int i = 0; i < strlen(text); i++)
     {
 
-        if (text[i] - 'A' >= 0 && text[i] - 'A' < 26)
+        if (text[i] >= 65 && text[i] <=90)
 
         {
 
