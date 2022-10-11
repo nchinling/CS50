@@ -4,6 +4,9 @@
 int main(void)
 {
 
+
+index = 0.0588 * L - 0.296 * S - 15.8
+printf(round(index));
 }
 
 int count_letters(string text)
