@@ -11,7 +11,6 @@ int count_sentences(string text);
 
 int main(void)
 {
-    int index;
 
     string user_text = get_string("Enter text: ");
 
@@ -24,7 +23,8 @@ int main(void)
     int S = count_sentences(user_text);
     printf("Sentences:%d\n",S);
 
-    index = round(0.0588 * L - 0.296 * S - 15.8);
+    int index = round(0.0588 * L - 0.296 * S - 15.8);
+    printf("Index:%d\n",index);
 
     if (index >= 16)
     {
