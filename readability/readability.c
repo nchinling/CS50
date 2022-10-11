@@ -15,7 +15,7 @@ int main(void)
 
     string user_text = get_string("Enter text: ");
 
-    //int L = count_letters(user_text);
+    int L = count_letters(user_text);
     // int W = count_words(user_text);
     // int S = count_sentences(user_text);
 
@@ -24,13 +24,13 @@ index = round(0.0588 * 1 - 0.296 * 1 - 15.8);
 printf("Grade:%d\n",index);
 }
 
-// int count_letters(string text)
-// {
+int count_letters(string text)
+{
 
 
 
-//      return int
-// }
+    return int
+}
 
 // int count_words(string text)
 // {
