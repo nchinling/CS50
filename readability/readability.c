@@ -12,25 +12,34 @@ int count_sentences(string text);
 int main(void)
 {
 
+    //Get text from user.
     string user_text = get_string("Enter text: ");
 
+    //Function to count number of letters
     float uL = count_letters(user_text);
-    printf("Letters:%f\n",uL);
+    //printf("Letters:%f\n",uL);
 
+    //Function to count number of words
     float uW = count_words(user_text);
-    printf("Words:%f\n",uW);
+    //printf("Words:%f\n",uW);
 
+    //Function to count number of sentences
     float uS = count_sentences(user_text);
-    printf("Sentences:%f\n",uS);
+    //printf("Sentences:%f\n",uS);
 
+    //Function to count number of letters per 100 words
     float L = (uL/uW)*100;
-     printf("L:%f\n",L);
+     //printf("L:%f\n",L);
+
+    //Function to count number of sentences per 100 words
     float S = (uS/uW)*100;
-     printf("S:%f\n", S);
+     //printf("S:%f\n", S);
 
+    //Obtain index value
     int index = round(0.0588 * L - 0.296 * S - 15.8);
-    printf("Index:%d\n",index);
+    //printf("Index:%d\n",index);
 
+    //if-else if-else conditional loop to decide what to print. 
     if (index >= 16)
     {
 
