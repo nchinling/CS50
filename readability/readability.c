@@ -100,7 +100,7 @@ int count_words(string text)
     for (int i = 0; i < strlen(text); i++)
     {
 
-        if (text[i] == 0)
+        if (text[i] == 32)
 
         {
 
