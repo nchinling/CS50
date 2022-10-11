@@ -56,10 +56,11 @@ int count_letters(string text)
 }
 
 
-//Function to count number of words
+//Function to count number of words. Number of words is always 1 more than punctuations. 
 int count_words(string text)
 {
-    int words = 0;
+    int words
+    int punctuations = 0;
 
     for (int i = 0; i < strlen(text); i++)
     {
@@ -82,6 +83,7 @@ int count_words(string text)
 
     }
 
+    words = punctuations + 1;
     return words;
 }
 
