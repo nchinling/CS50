@@ -19,8 +19,8 @@ int main(void)
     // int S = count_sentences(user_text);
 
 
-index = 0.0588 * 1 - 0.296 * 1 - 15.8;
-printf("%d\n",index);
+index = round(0.0588 * 1 - 0.296 * 1 - 15.8);
+printf("Grade:%d\n",index);
 }
 
 // int count_letters(string text)
