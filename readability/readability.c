@@ -24,7 +24,9 @@ int main(void)
     printf("Sentences:%d\n",uS);
 
     float L = (uL/uW)*100;
+     printf("L:%f\n",L);
     float S = (uS/uW)*100;
+     printf("S:%f\n", S);
 
     int index = round(0.0588 * L - 0.296 * S - 15.8);
     printf("Index:%d\n",index);
