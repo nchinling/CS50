@@ -14,16 +14,17 @@ int main(void)
 
     string user_text = get_string("Enter text: ");
 
-    int L = count_letters(user_text);
-    printf("Letters:%d\n",L);
+    int uL = count_letters(user_text);
+    printf("Letters:%d\n",uL);
 
-    int W = count_words(user_text);
-    printf("Words:%d\n",W);
+    int uW = count_words(user_text);
+    printf("Words:%d\n",uW);
 
-    int S = count_sentences(user_text);
-    printf("Sentences:%d\n",S);
+    int uS = count_sentences(user_text);
+    printf("Sentences:%d\n",uS);
 
-    int aL = (L/W)
+    float L = (uL/uW)*100;
+    float S = (uS/uW)*100;
 
     int index = round(0.0588 * L - 0.296 * S - 15.8);
     printf("Index:%d\n",index);
