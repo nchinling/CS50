@@ -8,14 +8,15 @@ int count_letters(string word);
 int count_words(string text);
 int count_sentences(string text);
 
+int index;
 
 int main(void)
 {
     string user_text = get_string("Enter text: ");
 
     int L = count_letters(user_text);
-    int S = compute_score(user_text);
-    int S = compute_score(user_text);
+    int W = count_words(user_text);
+    int S = count_strings(user_text);
 
 
 index = 0.0588 * L - 0.296 * S - 15.8;
