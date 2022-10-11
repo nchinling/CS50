@@ -24,7 +24,22 @@ int main(void)
     int S = count_sentences(user_text);
     printf("Sentences:%d\n",S);
 
-index = round(0.0588 * 1 - 0.296 * 1 - 15.8);
+    index = round(0.0588 * L - 0.296 * S - 15.8);
+
+    if (index >= 16)
+    {
+
+        printf("Grade 16+\n",index);
+
+    }
+
+    else
+    {
+
+         printf("Grade:%d\n",index);
+
+    }
+
 printf("Grade:%d\n",index);
 }
 
