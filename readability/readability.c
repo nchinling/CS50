@@ -28,7 +28,7 @@ index = round(0.0588 * 1 - 0.296 * 1 - 15.8);
 printf("Grade:%d\n",index);
 }
 
-//Function to count number of words
+//Function to count number of letter
 int count_letters(string text)
 {
     int letters = 0;
