@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
+//create function prototypes. Ends with semi-colon. 
+int count_letters(string word);
+int count_words(string text);
+int count_sentences(string text);
+
 int main(void)
 {
 
