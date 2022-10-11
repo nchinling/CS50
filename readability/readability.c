@@ -10,9 +10,13 @@ int count_sentences(string text);
 
 int main(void)
 {
-string text = get_string("Enter text: ");
+    string text = get_string("Enter text: ");
 
-index = 0.0588 * L - 0.296 * S - 15.8
+    int score1 = compute_score(word1);
+    int score2 = compute_score(word2);
+
+
+index = 0.0588 * L - 0.296 * S - 15.8;
 printf(round(index));
 }
 
