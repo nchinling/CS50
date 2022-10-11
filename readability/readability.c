@@ -28,18 +28,18 @@ int main(void)
     //printf("Sentences:%f\n",uS);
 
     //Function to count number of letters per 100 words
-    float L = (uL/uW)*100;
-     //printf("L:%f\n",L);
+    float L = (uL / uW) * 100;
+    //printf("L:%f\n",L);
 
     //Function to count number of sentences per 100 words
-    float S = (uS/uW)*100;
-     //printf("S:%f\n", S);
+    float S = (uS / uW) * 100;
+    //printf("S:%f\n", S);
 
     //Obtain index value
     int index = round(0.0588 * L - 0.296 * S - 15.8);
     //printf("Index:%d\n",index);
 
-    //if-else if-else conditional loop to decide what to print. 
+    //if-else if-else conditional loop to decide what to print.
     if (index >= 16)
     {
 
@@ -50,14 +50,14 @@ int main(void)
     else if (index < 1)
     {
 
-         printf("Before Grade 1\n");
+        printf("Before Grade 1\n");
 
     }
 
     else
     {
 
-         printf("Grade %d\n",index);
+        printf("Grade %d\n", index);
 
     }
 
@@ -72,7 +72,7 @@ int count_letters(string text)
     for (int i = 0; i < strlen(text); i++)
     {
 
-        if ((text[i] >= 65 && text[i] <= 90) || (text[i] >= 97 && text[i] <= 122) )
+        if ((text[i] >= 65 && text[i] <= 90) || (text[i] >= 97 && text[i] <= 122))
 
         {
 
