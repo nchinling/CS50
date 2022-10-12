@@ -7,6 +7,7 @@
 int main(int argc, string argv[])
 {
     // Make sure program was run with just one command-line argument
+    // ensure argc ==2 using if-else loop. 
 
     // Make sure every character in argv[1] is a digit
 
