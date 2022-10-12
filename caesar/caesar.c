@@ -10,14 +10,14 @@ int main(int argc, string argv[])
 
 }
 
-int only_digits(string argv)
+int only_digits(string argv[])
 {
 
 
 
 }
 
-int rotate(string argv)
+int rotate(char argv[])
 {
 
 
