@@ -13,7 +13,8 @@ int main(int argc, string argv[])
 int only_digits(string argv[])
 {
 
-
+//pseudocode
+//if string contains only
 
 }
 
