@@ -10,6 +10,21 @@ int main(int argc, string argv[])
 
 }
 
+int only_digits(string argv)
+{
+
+
+
+}
+
+int rotate(string argv)
+{
+
+
+
+}
+
+
 // int main(int argc, string argv[])
 // {
 //     for (int i = 0; i < argc; i++)
