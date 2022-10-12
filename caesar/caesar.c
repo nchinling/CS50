@@ -5,8 +5,11 @@
 
 int main(int argc, string argv[])
 {
-
-  string caesarc = cipher(argv[]);
+//     for (int i = 0; i < argc; i++)
+//     {
+//         printf("%s\n", argv[i]);
+//     }
+  //string caesarc = cipher(argv[]);
 
 }
 
