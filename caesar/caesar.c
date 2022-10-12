@@ -14,7 +14,8 @@ int only_digits(string argv[])
 {
 
 //pseudocode
-//if string contains only
+//if string contains only 0-9 is false, return 1
+//else string contains 0-9 is true, return 0
 
 }
 
