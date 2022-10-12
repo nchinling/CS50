@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 {
 
- 
+  string caesarc = cipher
 
 }
 
