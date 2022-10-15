@@ -93,5 +93,4 @@ int rotate(char letter, int key)
     //printf("%c", symbol);
     return symbol;
   }
-
 }
