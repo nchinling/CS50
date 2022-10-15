@@ -19,7 +19,7 @@ int main(int argc, string argv[])
       int num = atoi(argv[1]);
       //printf("The key is %d\n",num);
 
-      string plaintext = get_string("plaintext: ");
+      string plaintext = get_string("plaintext:");
 
         for (int i = 0; i < strlen(plaintext); i++)
         {
