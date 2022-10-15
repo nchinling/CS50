@@ -26,7 +26,7 @@ int main(void)
             //if (i + j < height - 1)
 
             //{
-                printf("#");
+                printf(".");
             //}
 
             //else
