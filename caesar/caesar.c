@@ -78,6 +78,7 @@ int rotate(char letter, int key)
     char encipher;
     char symbol;
 
+//use when it is letter and in lowercase
     if (isalpha(letter) && islower(letter))
     {
         encipher = ((letter - 97 + key) % 26) + 97;
@@ -85,6 +86,7 @@ int rotate(char letter, int key)
         return encipher;
     }
 
+//use when it is letter and in uppercase
     else if (isalpha(letter) && isupper(letter))
     {
         encipher = ((letter - 65 + key) % 26) + 65;
@@ -92,6 +94,7 @@ int rotate(char letter, int key)
         return encipher;
     }
 
+//return the symbol. 
     else
     {
         symbol = letter;
