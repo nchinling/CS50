@@ -12,16 +12,16 @@ int main(int argc, string argv[])
     char code[1000];
 
     // Make sure program was run with just one command-line argument by using argc == 2
-    if (argc == 2 && only_digits(argv[1]) == 0 )
+    if (argc == 2 && only_digits(argv[1]) == 0)
     {
 
-      // Convert argv[1] from a `string` to an `int`
-      int num = atoi(argv[1]);
-      //printf("The key is %d\n",num);
+        // Convert argv[1] from a `string` to an `int`
+        int num = atoi(argv[1]);
+        //printf("The key is %d\n",num);
 
-      string plaintext = get_string("plaintext:");
+        string plaintext = get_string("plaintext:");
 
-        for (int i = 0; i < strlen(plaintext)+1; i++)
+        for (int i = 0; i < strlen(plaintext) + 1; i++)
         {
 
             char letter = plaintext[i];
@@ -30,15 +30,15 @@ int main(int argc, string argv[])
 
         }
 
-        printf("ciphertext:%s\n",code);
+        printf("ciphertext:%s\n", code);
         return 0;
     }
 
     else
     {
 
-      printf("Usage: %s key\n", argv[0]);
-      return 1;
+        printf("Usage: %s key\n", argv[0]);
+        return 1;
 
     }
 
@@ -51,19 +51,19 @@ int only_digits(string numcheck)
     string digit = numcheck;
     int val;
 
-  for (int i = 0; i < strlen(digit); i++)
-  {
-      if (digit[i] - 48 >= 0 && digit[i] - 48 <= 9)
-      {
-        val = 0;
+    for (int i = 0; i < strlen(digit); i++)
+    {
+        if (digit[i] - 48 >= 0 && digit[i] - 48 <= 9)
+        {
+          val = 0;
 
-      }
-      else
-      {
+        }
+        else
+        {
         val = 1;
-      }
+        }
 
-  }
+    }
 
     return val;
 }
@@ -76,22 +76,22 @@ int rotate(char letter, int key)
 
     if (isalpha(letter) && islower(letter))
     {
-      encipher = ((letter - 97 + key) % 26) + 97;
+        encipher = ((letter - 97 + key) % 26) + 97;
         //printf("%c", encipher);
         return encipher;
-  }
+    }
 
-  else if (isalpha(letter) && isupper(letter))
-  {
-  encipher = ((letter - 65 + key) % 26) + 65;
+    else if (isalpha(letter) && isupper(letter))
+    {
+      encipher = ((letter - 65 + key) % 26) + 65;
   //printf("%c", encipher);
-  return encipher;
-  }
+      return encipher;
+     }
 
-  else
-  {
-    symbol = letter;
+    else
+    {
+      symbol = letter;
     //printf("%c", symbol);
-    return symbol;
-  }
+      return symbol;
+    }
 }
