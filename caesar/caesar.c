@@ -4,12 +4,15 @@
 #include <string.h>
 #include <stdlib.h>
 
+
+//declare functions used at beginning
 int only_digits(string numcheck);
 int rotate(char letter, int key);
 
+//main function
 int main(int argc, string argv[])
 {
-    char code[1000];
+    char code[1000];    //create a char array
 
     // Make sure program was run with just one command-line argument by using argc == 2
     if (argc == 2 && only_digits(argv[1]) == 0)
@@ -17,10 +20,11 @@ int main(int argc, string argv[])
 
         // Convert argv[1] from a `string` to an `int`
         int num = atoi(argv[1]);
-        //printf("The key is %d\n",num);
 
+        //Get plaintext
         string plaintext = get_string("plaintext:");
 
+        //Apply rotate function to encipher
         for (int i = 0; i < strlen(plaintext) + 1; i++)
         {
 
@@ -55,12 +59,12 @@ int only_digits(string numcheck)
     {
         if (digit[i] - 48 >= 0 && digit[i] - 48 <= 9)
         {
-          val = 0;
+            val = 0;
 
         }
         else
         {
-        val = 1;
+            val = 1;
         }
 
     }
@@ -77,21 +81,21 @@ int rotate(char letter, int key)
     if (isalpha(letter) && islower(letter))
     {
         encipher = ((letter - 97 + key) % 26) + 97;
-        //printf("%c", encipher);
+
         return encipher;
     }
 
     else if (isalpha(letter) && isupper(letter))
     {
-      encipher = ((letter - 65 + key) % 26) + 65;
-  //printf("%c", encipher);
-      return encipher;
-     }
+        encipher = ((letter - 65 + key) % 26) + 65;
+
+        return encipher;
+    }
 
     else
     {
-      symbol = letter;
-    //printf("%c", symbol);
-      return symbol;
+        symbol = letter;
+
+        return symbol;
     }
 }
