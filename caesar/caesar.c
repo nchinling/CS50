@@ -89,8 +89,8 @@ int rotate(char letter, int key)
 
   else if (letter == 0)
   {
-    symbol = letter;
-    //printf("%c", symbol);
+    //symbol = letter;
+    printf("%c", symbol);
     return symbol;
   }
 
