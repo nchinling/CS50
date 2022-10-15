@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     char code[1000];
 
     // Make sure program was run with just one command-line argument by using argc == 2
-    if (argc == 2 && only_digits(argv[1]) == 1 )
+    if (argc == 2 && only_digits(argv[1]) == 0 )
     {
 
       // Convert argv[1] from a `string` to an `int`
@@ -37,9 +37,10 @@ int main(int argc, string argv[])
     {
 
       printf("Usage: %s key\n", argv[0]);
+      return 1;
 
     }
-
+return 0;
 }
 
 
@@ -53,12 +54,12 @@ int only_digits(string numcheck)
   {
       if (digit[i] - 48 >= 0 && digit[i] - 48 <= 9)
       {
-        val = 1;
+        val = 0;
 
       }
       else
       {
-        val = 0;
+        val = 1;
       }
 
   }
