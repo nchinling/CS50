@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     char code[1000];
 
     // Make sure program was run with just one command-line argument by using argc == 2
-    if (argc == 2 && only_digits(argv[1]) == 0 )
+    if (argc == 2 && only_digits(argv[1]) == 1 )
     {
 
       // Convert argv[1] from a `string` to an `int`
@@ -53,12 +53,12 @@ int only_digits(string numcheck)
   {
       if (digit[i] - 48 >= 0 && digit[i] - 48 <= 9)
       {
-        val = 0;
+        val = 1;
 
       }
       else
       {
-        val = 1;
+        val = 0;
       }
 
   }
