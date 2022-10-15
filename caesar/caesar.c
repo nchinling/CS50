@@ -87,6 +87,13 @@ int rotate(char letter, int key)
   return encipher;
   }
 
+  else if (letter)
+  {
+    symbol = letter;
+    //printf("%c", symbol);
+    return symbol;
+  }
+
   else
   {
     symbol = letter;
