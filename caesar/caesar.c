@@ -21,7 +21,7 @@ int main(int argc, string argv[])
 
       string plaintext = get_string("plaintext:");
 
-        for (int i = 0; i < strlen(plaintext+1); i++)
+        for (int i = 0; i < strlen(plaintext); i++)
         {
 
             char letter = plaintext[i];
