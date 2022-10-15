@@ -31,6 +31,7 @@ int main(int argc, string argv[])
         }
 
         printf("ciphertext:%s\n",code);
+        return 0;
     }
 
     else
@@ -40,7 +41,7 @@ int main(int argc, string argv[])
       return 1;
 
     }
-return 0;
+
 }
 
 
