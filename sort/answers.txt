@@ -5,9 +5,9 @@ How do you know?: TODO
 
 sort2 uses: Merge Sort
 
-How do you know?: Shortest sort time for all 
+How do you know?: Shortest sort time for all length and arrangment of numbers.
 
-sort3 uses: TODO
+sort3 uses: Bubble sort
 
 How do you know?: TODO
 
