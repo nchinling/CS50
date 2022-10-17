@@ -2,23 +2,24 @@ sort1 uses: TODO
 
 How do you know?: TODO
 
-reversed5000 takes:
-real 0.078s, user 0.052s, sys 0.020s
-random5000 takes: real 0.080s, user 0.057s, sys 0.019s
-sorted5000 takes: real 0.072s, user 0.012s, sys 0.012s
+reversed5000 takes: real 0.078s, user 0.052s, sys 0.020s
+random5000 takes:   real 0.080s, user 0.057s, sys 0.019s
+sorted5000 takes:   real 0.072s, user 0.012s, sys 0.012s
 
 sort2 uses: TODO
-
-
-
+reversed5000 takes: real 0.102s, user 0.056s, sys 0.021s
+random5000 takes: real 0.079s, user 0.003s, sys 0.025s
+sorted5000 takes: real 0.031s, user 0.004s, sys 0.023s
 
 How do you know?: TODO
 
 sort3 uses: TODO
+reversed5000 takes: real 0.077s, user 0.026s, sys 0.026s
+random5000 takes: real 0.059s, user 0.030s, sys 0.019s
+sorted5000 takes: real 0.051s, user 0.031s, sys 0.019s
+
 
 How do you know?: TODO
 
 
-reversed10000 takes:
-real 0.297s, user 0.200s, sys 0.037s
 
