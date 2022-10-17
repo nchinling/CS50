@@ -3,7 +3,7 @@ sort1 uses: TODO
 How do you know?: TODO
 
 reversed5000 takes: real 0.078s, user 0.052s, sys 0.020s
-random5000 takes:   real 0.080s, user 0.057s, sys 0.019s
+random5000 takes:   real 0.080s/0.085, user 0.057s, sys 0.019s
 sorted5000 takes:   real 0.072s, user 0.012s, sys 0.012s
 
 sort2 uses: TODO
