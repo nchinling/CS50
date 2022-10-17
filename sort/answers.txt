@@ -1,17 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Selection Sort
 
 How do you know?: TODO
 
-reversed5000 takes: real 0.078s, user 0.052s, sys 0.020s
-random5000 takes:   real 0.080s/0.085, user 0.057s, sys 0.019s
-sorted5000 takes:   real 0.072s, user 0.012s, sys 0.012s
 
-sort2 uses: TODO
-reversed5000 takes: real 0.102s, user 0.056s, sys 0.021s
-random5000 takes: real 0.079s/0.035/0.05, user 0.003s, sys 0.025s
-sorted5000 takes: real 0.031s, user 0.004s, sys 0.023s
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: Shortest sort time for all 
 
 sort3 uses: TODO
 
