@@ -21,5 +21,8 @@ sorted5000 takes: real 0.051s, user 0.031s, sys 0.019s
 
 How do you know?: TODO
 
-
+Observation:
+Shortest time for sorted numbers: Sort 2
+Shortest time for random numbers: Sort 3
+Longest time for sorted numbers: Sort 1
 
