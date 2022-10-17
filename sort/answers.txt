@@ -24,5 +24,9 @@ How do you know?: TODO
 Observation:
 Shortest time for sorted numbers: Sort 2
 Shortest time for random numbers: Sort 3
+Shortest time for reversed: sort1 and sort 2 tie
+
 Longest time for sorted numbers: Sort 1
+Longest time for random number: Sort 1 and sort 2
+Longest time for reversed: Sort 2
 
