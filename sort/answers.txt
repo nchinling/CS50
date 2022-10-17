@@ -23,7 +23,7 @@ How do you know?: TODO
 
 Observation:
 Shortest time for sorted numbers: Sort 2 -> merge
-Shortest time for random numbers: Sort 3
+Shortest time for random numbers: Sort 2 ->
 Shortest time for reversed: sort1 and sort 2 tie
 
 Longest time for sorted numbers: Sort 1
