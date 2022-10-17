@@ -1,5 +1,7 @@
 sort1 uses: TODO
 reversed10000 takes:
+real 0.297s, user 0.200s, sys 0.037s
+
 
 How do you know?: TODO
 
