@@ -9,7 +9,7 @@ How do you know?: Shortest sort time for all length and arrangment of numbers.
 
 sort3 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: Can have shortest running time when numbers are already sorted (works only with small values)
 
 
 
