@@ -14,21 +14,12 @@ sorted5000 takes: real 0.031s, user 0.004s, sys 0.023s
 How do you know?: TODO
 
 sort3 uses: TODO
-reversed5000 takes: real 0.077s, user 0.026s, sys 0.026s
-random5000 takes: real 0.059/0.057s, user 0.030s, sys 0.019s
-sorted5000 takes: real 0.051s, user 0.031s, sys 0.019s
-
 
 How do you know?: TODO
 
-Observation:
-Shortest time for sorted numbers: Sort 2 -> merge
-Shortest time for random numbers: Sort 2 ->
-Shortest time for reversed: sort1 and sort 2 tie
 
-Longest time for sorted numbers: Sort 1
-Longest time for random number: Sort 1 and sort 2
-Longest time for reversed: Sort 2
+
+
 
 Bubble sort: best time: Omega(N), worse time: O(n^2)
 Selection sort: best Omega(n^2), worse time: O(n^2)
