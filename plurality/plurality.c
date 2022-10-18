@@ -55,7 +55,7 @@ int main(int argc, string argv[])
         // Check for invalid vote
         if (!vote(name))
         {
-            printf("Invalid fun.\n");
+            printf("Invalid vote.\n");
         }
     }
 
