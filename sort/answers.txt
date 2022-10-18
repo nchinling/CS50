@@ -12,7 +12,7 @@ How do you know?: Shortest sort time for all length and arrangement of numbers.
 
 sort3 uses: Selection sort
 
-How do you know?: Selection sort generally performs better than bubble sort (sort1),unless when the list is ordered.
+How do you know?: Selection sort generally performs better than bubble sort (sort1),unless when the list is ordered, in which it would lose out to bubble sort. 
 Its best time complexity is Omega(n^2)
 
 
