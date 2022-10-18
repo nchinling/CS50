@@ -78,13 +78,12 @@ bool vote(string name)
         }
         printf("%i\n", candidates[i].votes);
         //printf("%i\n", candidates[i].votes);
-        //return true;
+        else
+        {
+        return false;
+        }
     }
     return true;
-
-
-    return false;
-
 
 }
 
