@@ -1,7 +1,8 @@
 sort1 uses: Bubble sort
 
 How do you know?: Bubble sort generally has the worst running times.
-The bubble sort performs better than selection sort when the list is already sorted (Best case scenario of omega(n)).
+The bubble sort performs better than selection sort when the list is already sorted (Best case scenario of omega(n)). This is
+seen in the running times, which is better than sort 3 when the list is ordered.
 
 
 
@@ -11,7 +12,8 @@ How do you know?: Shortest sort time for all length and arrangement of numbers.
 
 sort3 uses: Selection sort
 
-How do you know?: Can have shortest running time when numbers are already sorted (works only with small values)
+How do you know?: Selection sort generally performs better than bubble sort (sort1),unless when the list is ordered.
+Its best time complexity is Omega(n^2)
 
 
 
