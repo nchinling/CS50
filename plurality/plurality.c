@@ -81,14 +81,14 @@ bool vote(string name)
         //return true;
     }
     return true;
-    
+
     return false;
 
 
 }
 
 // Print the winner (or winners) of the election
-void print_winner(void)
+void print_winner(candidates[i].votes)
 {
     // TODO
     return;
