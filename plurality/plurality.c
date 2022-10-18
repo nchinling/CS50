@@ -72,7 +72,7 @@ bool vote(string name)
     {
         if (strcmp(candidates[i].name, name) == 0)
         candidates[i].votes=candidates[i].votes+1;
-        //printf("%i\n", candidates[i].votes);
+        printf("%i\n", candidates[i].votes);
         return true;
     }
 
