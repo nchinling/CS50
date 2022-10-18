@@ -1,6 +1,8 @@
 sort1 uses: Bubble sort
 
-How do you know?: Bubble sort generally has the worst running times. Although it has O(n^2), which is the same as selection sort,
+How do you know?: Bubble sort generally has the worst running times.
+The bubble sort performs better than selection sort when the list is already sorted (Best case scenario of omega(n)).
+
 
 
 sort2 uses: Merge Sort
