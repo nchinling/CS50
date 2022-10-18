@@ -1,13 +1,13 @@
-sort1 uses: Selection Sort
+sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: Bubble sort generally has the worst running times. Although it has O(n^2), which is the same as selection sort,
 
 
 sort2 uses: Merge Sort
 
 How do you know?: Shortest sort time for all length and arrangement of numbers.
 
-sort3 uses: Bubble sort
+sort3 uses: Selection sort
 
 How do you know?: Can have shortest running time when numbers are already sorted (works only with small values)
 
