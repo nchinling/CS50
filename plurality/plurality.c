@@ -96,7 +96,7 @@ void print_winner(void)
         }
     }
 
-    for (int j = candidate_count-1; j != 0; j--)
+    for (int j = candidate_count; j != 0; j--)
     {
         if (candidates[j].votes > max2)
         {
