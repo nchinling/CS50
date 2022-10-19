@@ -60,7 +60,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            printf("%i\n", candidates[i].votes);
+        candidates[i].votes);
         }
 
     }
