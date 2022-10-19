@@ -91,8 +91,13 @@ void print_winner(void)
             max = candidates[i].votes;
             printf("%s\n", candidates[i].name);
         }
-
-        if (candidates[])
     }
+
+    for (int j = candidate_count; j ! 0; j--)
+    {
+        if
+
+    }
+
     return;
 }
