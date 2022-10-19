@@ -60,7 +60,7 @@ int main(int argc, string argv[])
         }
         else
         {
-        candidates[i].votes);
+        candidates[i].votes;
         }
 
     }
