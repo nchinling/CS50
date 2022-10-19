@@ -58,11 +58,6 @@ int main(int argc, string argv[])
         {
             printf("Invalid vote.\n");
         }
-        else
-        {
-        candidates[i].votes;
-        }
-
     }
 
     // Display winner of election
