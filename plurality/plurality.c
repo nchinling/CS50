@@ -101,9 +101,9 @@ void print_winner(void)
         if (candidates[j].votes > max2)
         {
             max2 = candidates[j].votes;
-            //printf("%s\n",candidates[j].name);
+            printf("%s\n",candidates[j].name);
         }
-     printf("%s\n",candidates[j].name);
+
 
     }
 
