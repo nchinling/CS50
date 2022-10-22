@@ -150,7 +150,7 @@ void tabulate(void)
         {
             candidates[i].votes = candidates[i].votes + 1;
             printf("Name:%s has %i votes,\n", candidates[i].name, candidates[i].votes);
-            break;
+            
         }
 
     }
