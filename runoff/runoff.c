@@ -164,7 +164,7 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > (1/2)*voter_count)
+        if (candidates[i].votes > voter_count/2)
         {
             printf("Winner is %s\n", candidates[i].name);
             return true;
