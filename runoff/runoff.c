@@ -170,11 +170,6 @@ bool print_winner(void)
             return true;
 
         }
-        else
-        {
-            printf("No winner\n");
-
-        }
 
     }
     return false;
