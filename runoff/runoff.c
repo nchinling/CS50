@@ -165,6 +165,11 @@ bool print_winner(void)
             printf("Winner is %s\n", candidates[i].name);
             return true;
         }
+        else
+        {
+            printf("No winner\n");
+
+        }
 
     }
     return false;
