@@ -148,8 +148,13 @@ void tabulate(void)
 
         if (candidates[i].eliminated == false)
         {
-            candidates[i].votes = candidates[i].votes + 1;
+            for (int j = 0; j < candidate_count; j++)
+            {
+            candidates[j].name = preferences[i][j];
+            candidates[j].votes = candidates[j].votes + 1;
             break;
+            }
+
         }
 
     }
