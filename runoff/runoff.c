@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-        for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
@@ -164,7 +164,7 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > voter_count/2)
+        if (candidates[i].votes > voter_count / 2)
         {
             printf("Winner is %s\n", candidates[i].name);
             return true;
@@ -179,17 +179,17 @@ bool print_winner(void)
 int find_min(void)
 {
     int min = voter_count;
-        for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].eliminated == false)
         {
-            if (candidates[i].eliminated == false )
+            if (candidates[i].votes < min)
             {
-                if (candidates[i].votes < min)
-                {
-                    min = candidates[i].votes;
-                }
+                min = candidates[i].votes;
             }
-
         }
+
+    }
     return min;
 }
 
@@ -201,17 +201,17 @@ bool is_tie(int min)
 
 
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
         {
-            if (candidates[i].votes == min)
-            {
-                counter = counter + 1;
-            }
-
-            if (candidates[i].eliminated == false)
-            {
-                remaining = remaining + 1;
-            }
+            counter = counter + 1;
         }
+
+        if (candidates[i].eliminated == false)
+        {
+            remaining = remaining + 1;
+        }
+    }
 
     if (counter == remaining)
     {
