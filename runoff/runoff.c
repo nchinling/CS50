@@ -149,6 +149,7 @@ void tabulate(void)
         if (candidates[i].eliminated == false)
         {
             candidates[i].votes = candidates[i].votes + 1;
+            printf("Name:%s has %i votes:", candidates[i].name, candidates[i].votes);
             break;
         }
 
