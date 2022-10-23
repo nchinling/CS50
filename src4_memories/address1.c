@@ -1,16 +1,16 @@
-// Compares two integers
+// Compares two strings' addresses
 
 #include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    // Get two integers
-    int i = get_int("i: ");
-    int j = get_int("j: ");
+    // Get two strings
+    char *s = get_string("s: ");
+    char *t = get_string("t: ");
 
-    // Compare integers
-    if (i == j)
+    // Compare strings' addresses
+    if (*s == *t)
     {
         printf("Same\n");
     }
