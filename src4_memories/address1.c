@@ -1,25 +1,29 @@
-// Capitalizes a string
+// Capitalizes a copy of a string
 
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main(void)
 {
     // Get a string
-    string s = get_string("s: ");
+    char *s = get_string("s: ");
 
-    // Copy string's address
-    string t = s;
+    // Allocate memory for another string
+    char *t = malloc(strlen(s) + 1);
 
-    // Capitalize first letter in string
-    if (strlen(t) > 0)
+    // Copy string into memory
+    for (int i = 0, n = strlen(s); i <= n; i++)
     {
-        t[0] = toupper(t[0]);
+        t[i] = s[i];
     }
 
-    // Print string twice
+    // Capitalize copy
+    t[0] = toupper(t[0]);
+
+    // Print strings
     printf("s: %s\n", s);
     printf("t: %s\n", t);
 }
