@@ -1,18 +1,21 @@
-// Prints an array using pointer arithmetic
+// Compares two integers
 
+#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    // An array of numbers
-    int numbers[] = {4, 6, 8, 2, 7, 5, 0};
+    // Get two integers
+    int i = get_int("i: ");
+    int j = get_int("j: ");
 
-    // Print numbers
-    printf("%i\n", *numbers);
-    printf("%i\n", *(numbers + 1));
-    printf("%i\n", *(numbers + 2));
-    printf("%i\n", *(numbers + 3));
-    printf("%i\n", *(numbers + 4));
-    printf("%i\n", *(numbers + 5));
-    printf("%i\n", *(numbers + 6));
+    // Compare integers
+    if (i == j)
+    {
+        printf("Same\n");
+    }
+    else
+    {
+        printf("Different\n");
+    }
 }
