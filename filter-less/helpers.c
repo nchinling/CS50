@@ -98,14 +98,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         //For each column
         for (int j = 0; j < width; j++)
         {
-            int sumGreen, sumBlue, sumRed;
-            sumGreen = sumBlue = sumRed = 0;
+            int sumGreen = 0;
+            int sumBlue = 0;
+            int sumRed = 0;
             int counter = 0;
 
             //Get neighbouring pixels
             for (int y = -1; y < 2; y++)
             {
-                for (int x = -1; x < 2, x++)
+                for (int x = -1; x < 2; x++)
                 {
                     int neighbourY = i + y;
                     int neighbourX = j + x;
