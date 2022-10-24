@@ -4,9 +4,16 @@
 int main(int argc, char *argv[])
 {
  // Check command-line arguments. Only 1
-    if (argc != 2 || )
+    if (argc != 2)
     {
-        printf("Usage: ./recover filename.c\n");
+        printf("Usage: ./recover filename\n");
+        return 1;
+    }
+
+    FILE *input = fopen(argv[1], "r");
+    if (input == NULL)
+    {
+        printf("Could not open file.\n");
         return 1;
     }
 }
