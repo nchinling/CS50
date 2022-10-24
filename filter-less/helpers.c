@@ -112,14 +112,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int neighbourX = j + x;
 
                     //Check if pixel is valid
-                    if (neighbourY < 0 || neighbourY > (height-1) || neighbourX < 0 || neighbourX > width - 1)
+                    if (neighbourY < 0 || neighbourY > (height-1) || neighbourX < 0 || neighbourX > (width - 1))
                     {
                         continue;
                     }
 
-                    sumBlue = sumBlue + image[neighbourX][neighbourY].rgbtBlue;
-                    sumGreen = sumGreen + image[neighbourX][neighbourY].rgbtGreen;
-                    sumRed = sumRed + image[neighbourX][neighbourY].rgbtRed;
+                    sumBlue = sumBlue + image[neighbourY][neighbourX].rgbtBlue;
+                    sumGreen = sumGreen + image[neighbourY][neighbourX].rgbtGreen;
+                    sumRed = sumRed + image[neighbourY][neighbourX].rgbtRed;
 
                     counter = counter + 1;
 
