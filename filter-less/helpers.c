@@ -30,9 +30,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
 
             //assign average to each rgbt
-            int sepiaRed = round(image[i][j].rgbtBlue*0.189 + image[i][j].rgbtGreen*0.769 + image[i][j].rgbtRed*0.393);
-            int sepiaGreen = round(image[i][j].rgbtBlue*0.168 + image[i][j].rgbtGreen*0.686 + image[i][j].rgbtRed*0.349);
-            int sepiaBlue = round(image[i][j].rgbtBlue*0.131 + image[i][j].rgbtGreen*0.534 + image[i][j].rgbtRed*0.272);
+            int sepiaRed = round(image[i][j].rgbtBlue  * 0.189 + image[i][j].rgbtGreen * 0.769 + image[i][j].rgbtRed * 0.393);
+            int sepiaGreen = round(image[i][j].rgbtBlue * 0.168 + image[i][j].rgbtGreen * 0.686 + image[i][j].rgbtRed * 0.349);
+            int sepiaBlue = round(image[i][j].rgbtBlue * 0.131 + image[i][j].rgbtGreen * 0.534 + image[i][j].rgbtRed * 0.272);
 
             //limit value of each rgbt to 255 (white)
             if (sepiaRed > 255)
@@ -64,16 +64,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         //For each column
-        for (int j = 0; j < width/2; j++)
+        for (int j = 0; j < width / 2; j++)
         {
             //copy most left pixel to temp
             RGBTRIPLE temp = image[i][j];
 
             //most right pixel replaces most left pixel
-            image[i][j] = image[i][width-(j+1)];
+            image[i][j] = image[i][width - (j + 1)];
 
             //temp (previously most left pix) replaces most right pixel
-            image[i][width-(j+1)] = temp;
+            image[i][width - (j + 1)] = temp;
         }
     }
     return;
@@ -112,7 +112,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int neighbourX = j + x;
 
                     //Check if pixel is valid
-                    if (neighbourY < 0 || neighbourY > (height-1) || neighbourX < 0 || neighbourX > (width - 1))
+                    if (neighbourY < 0 || neighbourY > (height - 1) || neighbourX < 0 || neighbourX > (width - 1))
                     {
                         continue;
                     }
@@ -123,9 +123,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     counter = counter + 1;
 
-                    temp[i][j].rgbtBlue = round(sumBlue/counter);
-                    temp[i][j].rgbtGreen = round(sumGreen/counter);
-                    temp[i][j].rgbtRed = round(sumRed/counter);
+                    temp[i][j].rgbtBlue = round(sumBlue / counter);
+                    temp[i][j].rgbtGreen = round(sumGreen / counter);
+                    temp[i][j].rgbtRed = round(sumRed / counter);
 
                 }
             }
