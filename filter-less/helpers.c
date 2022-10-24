@@ -30,7 +30,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
 
             //assign average to each rgbt
-            int sepiaRed = round(image[i][j].rgbtBlue*0.189 + image[i][j].rgbtGreen*0.189 + image[i][j].rgbtRed*0.769);
+            int sepiaRed = round(image[i][j].rgbtBlue*0.189 + image[i][j].rgbtGreen*0.769 + image[i][j].rgbtRed*0.393);
             int sepiaGreen = round(image[i][j].rgbtBlue*0.168 + image[i][j].rgbtGreen*0.686 + image[i][j].rgbtRed*0.349);
             int sepiaBlue = round(image[i][j].rgbtBlue*0.131 + image[i][j].rgbtGreen*0.534 + image[i][j].rgbtRed*0.272);
 
