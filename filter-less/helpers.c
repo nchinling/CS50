@@ -3,9 +3,11 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int h = 0; h < height; h++)
+    //For each row
+    for (int i = 0; i < height; i++)
     {
-        for (int w = 0; w < width; w++)
+        //For each column
+        for (int j = 0; j < width; j++)
         {
             RGBTRIPLE pix = image[h][w];
             BYTE value = round((pix.rgbtBlue + pix.rgbtGreen + pix.rgbtRed) / 3.0);
