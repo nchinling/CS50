@@ -124,11 +124,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     temp[i][j].rgbtBlue = round(sumBlue/counter);
                     temp[i][j].rgbtGreen = round(sumGreen/counter);
                     temp[i][j].rgbtRed = round(sumRed/counter);
-                    
+
                 }
             }
 
         }
     }
+
+    //copy temp into original image
+    for (int i = 0; i < height; i++)
+    {
+        //For each column
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtBlue = temp[i][j].rgbtBlue;
+            image[i][j].rgbtGreen = temp[i][j].rgbtGreen;
+            image[i][j].rgbtRed = temp[i][j].rgbtRed;
+        }
+    }
+
     return;
 }
