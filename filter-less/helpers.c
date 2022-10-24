@@ -67,13 +67,19 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             //copy most left pixel to temp
-            RGBTRIPLE temp = image[i][j];
+            RGBTRIPLE temp.rgbtBlue = image[i][j].rgbtBlue;
+            RGBTRIPLE temp.rgbtGreen = image[i][j].rgbtGreen;
+            RGBTRIPLE temp.rgbtRed = image[i][j].rgbtRed;
 
             //most right pixel replaces most left pixel
             image[i][j].rgbtBlue = image[i][width-j].rgbtBlue;
+            image[i][j].rgbtGreen = image[i][width-j].rgbtGreen;
+            image[i][j].rgbtRed = image[i][width-j].rgbtRed;
 
             //temp (previously most left pix) replaces most right pixel
-            image[i][width-j] = temp;
+            image[i][width-j].rgbtBlue = temp.rgbtBlue;
+            image[i][width-j].rgbtGreen = temp.rgbtGreen;
+            image[i][width-j].rgbtRed = temp.rgbtRed;
         }
     }
     return;
