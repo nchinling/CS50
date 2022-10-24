@@ -60,14 +60,22 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
-{for (int i = 0; i < height; i++)
+{
+    for (int i = 0; i < height; i++)
     {
         //For each column
         for (int j = 0; j < width; j++)
         {
+            //copy most left pixel to temp
+            int temp = image[i][j];
 
- 
+            //most right pixel replaces most left pixel
+            image[i][j] = image[i][width-j];
+
+            //temp (previously most left pix) replaces most right pixel
+            image[i][width-j] = temp;
         }
+    }
     return;
 }
 
