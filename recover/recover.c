@@ -6,7 +6,7 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
-    unsigned char buffer[BLOCK_SIZE];
+    BYTE buffer[BLOCK_SIZE];
     FILE *output = NULL;
     int count = 0;
     char *filename = malloc(8*sizeof(char));
