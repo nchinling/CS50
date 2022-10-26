@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+typdef uint8_t BYTE
 
 int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
     int *buffer = malloc(3 * sizeof(int));
-    typedef uint8_t buffer[BLOCK_SIZE];
     int count = 0;
     FILE *output = NULL;
 
