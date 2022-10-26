@@ -16,4 +16,10 @@ int main(int argc, char *argv[])
         printf("Could not open file.\n");
         return 1;
     }
+
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    {
+
+
+    }
 }
