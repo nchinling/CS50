@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -8,7 +9,6 @@ int main(int argc, char *argv[])
     unsigned char buffer[BLOCK_SIZE];
     int count = 0;
     char *filename = malloc(8*sizeof(char));
-    typedef uint8_t BYTE;
 
  // Check command-line arguments. Only 1
     if (argc != 2)
