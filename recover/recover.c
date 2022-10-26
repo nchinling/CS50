@@ -8,7 +8,8 @@ int main(int argc, char *argv[])
     int *buffer = malloc(3 * sizeof(int));
     typedef uint8_t buffer[BLOCK_SIZE];
     int count = 0;
-    
+    FILE *output = NULL;
+
 
 
  // Check command-line arguments. Only 1
