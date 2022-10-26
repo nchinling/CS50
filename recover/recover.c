@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer, sizeof(char), BLOCK_SIZE, output);
         }
-    free(filename);
+    
     }
     free(filename);
     fclose(output);
