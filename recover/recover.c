@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
         if (output != NULL)
         {
-            fwrite(buffer, sizeof(char), BLOCK_SIZE, output);
+            fwrite(buffer, 1, BLOCK_SIZE, output);
         }
 
     }
