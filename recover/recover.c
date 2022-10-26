@@ -6,11 +6,10 @@ typdef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
-    int *buffer = malloc(3 * sizeof(int));
+    unsigned char buffer[BLOCK_SIZE];
     int count = 0;
     FILE *output = NULL;
-
-
+    char *filename = malloc(8*sizeof(char));
 
  // Check command-line arguments. Only 1
     if (argc != 2)
