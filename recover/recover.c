@@ -29,11 +29,23 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
         {
-            sprintf(input, "%03i.jpg", count);
-            output = fopen(input, "w");
+            //create file name
+            sprintf(filename, "%03i.jpg", count);
+
+            output = fopen(filename, "w");
+
             counter = counter + 1;
-            fwrite(input, BLOCK_SIZE, 1, output);
+        }
+
+        if (output != NULL)
+        {
+            fwrite(buffer, sizeof(char), BLOCK_SIZE, output);
         }
 
     }
+    free(filename);
+    fclose(output_file);
+    fclose(input_file);
+
+    return 0;
 }
