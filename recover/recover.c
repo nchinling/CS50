@@ -6,9 +6,10 @@ int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
     int *buffer = malloc(3 * sizeof(int));
-    typedef uint8_t BYTE[BLOCK_SIZE];
+    typedef uint8_t buffer[BLOCK_SIZE];
     int count = 0;
     
+
 
  // Check command-line arguments. Only 1
     if (argc != 2)
