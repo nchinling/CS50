@@ -3,6 +3,7 @@
 
 int main(int argc, char *argv[])
 {
+    int BLOCK_SIZE = 512;
  // Check command-line arguments. Only 1
     if (argc != 2)
     {
@@ -19,7 +20,9 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, *input) == BLOCK_SIZE)
     {
-
+        if (buffer[0] == 0xff)
+        buffer[1] == 0xd8
+        buffer[2] == 0xff
 
     }
 }
