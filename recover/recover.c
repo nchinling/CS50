@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     if (input == NULL)
     {
         printf("Could not open file.\n");
-        return 1;
+        return 2;
     }
 
     while (fread(buffer, 1, BLOCK_SIZE, input) == BLOCK_SIZE)
