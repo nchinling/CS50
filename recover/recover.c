@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
     int *buffer = malloc(3 * sizeof(int));
-    typedef uint8_t BYTE;
-    uint8_t BYTE[BLOCK_SIZE];
+    typedef uint8_t BYTE[BLOCK_SIZE];
+    
  // Check command-line arguments. Only 1
     if (argc != 2)
     {
