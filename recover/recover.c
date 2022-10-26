@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
@@ -27,9 +28,8 @@ int main(int argc, char *argv[])
         {
             sprintf(filename, "%03i.jpg", 2);
             FILE *img = fopen(filename, "w");
-            fwrite(header, HEADER_SIZE, 1, output);
+            fwrite(filename, BLOCK_SIZE, 1, output);
         }
-
 
     }
 }
