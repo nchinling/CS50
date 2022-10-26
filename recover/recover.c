@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     const int BLOCK_SIZE = 512;
     int *buffer = malloc(3 * sizeof(int));
     typedef uint8_t BYTE[BLOCK_SIZE];
-    
+
  // Check command-line arguments. Only 1
     if (argc != 2)
     {
@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
         {
-            sprintf(filename, "%03i.jpg", 2);
-            FILE *img = fopen(filename, "w");
-            fwrite(filename, BLOCK_SIZE, 1, output);
+            sprintf(input, "%03i.jpg", 2);
+            FILE *img = fopen(input, "w");
+            fwrite(input, BLOCK_SIZE, 1, output);
         }
 
     }
