@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-    int BLOCK_SIZE = 512;
+    const int BLOCK_SIZE = 512;
     int *buffer = malloc(3 * sizeof(int));
  // Check command-line arguments. Only 1
     if (argc != 2)
