@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-typedef uint8_t BYTE;
+//typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -29,11 +29,13 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
         {
-            //create file name
+            //create filename
             sprintf(filename, "%03i.jpg", count);
 
+            //open filename to write
             output = fopen(filename, "w");
 
+            //increase count for naming of files
             count = count + 1;
         }
 
