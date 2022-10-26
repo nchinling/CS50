@@ -27,10 +27,7 @@ int main(int argc, char *argv[])
         {
             sprintf(filename, "%03i.jpg", 2);
             FILE *img = fopen(filename, "w");
-
-             
-    fread(header, HEADER_SIZE, 1, input);
-    fwrite(header, HEADER_SIZE, 1, output);
+            fwrite(header, HEADER_SIZE, 1, output);
         }
 
 
