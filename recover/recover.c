@@ -8,7 +8,6 @@ int main(int argc, char *argv[])
     const int BLOCK_SIZE = 512;
     unsigned char buffer[BLOCK_SIZE];
     int count = 0;
-    FILE *output = NULL;
     char *filename = malloc(8*sizeof(char));
 
  // Check command-line arguments. Only 1
@@ -18,6 +17,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    FILE *output = NULL;
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
