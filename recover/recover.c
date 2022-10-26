@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     BYTE buffer[BLOCK_SIZE];
     FILE *output = NULL;
     int count = 0;
-    char *filename = malloc(8*sizeof(char));
+    char filename[8];
 
  // Check command-line arguments. Only 1
     if (argc != 2)
@@ -46,7 +46,6 @@ int main(int argc, char *argv[])
 
     }
 
-    free(filename);
     fclose(output);
     fclose(input);
 
