@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     const int BLOCK_SIZE = 512;
     int *buffer = malloc(3 * sizeof(int));
-    typedef uint8_t BYTE
+    typedef uint8_t BYTE;
  // Check command-line arguments. Only 1
     if (argc != 2)
     {
