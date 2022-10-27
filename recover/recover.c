@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     int count = 0;
     char filename[8];
 
-    //fread returns number of element. If number of elements read is equal to 512B, perform loop. 
+    //fread returns number of element. If number of elements read is equal to 512B, perform loop.
     while (fread(buffer, 1, BLOCK_SIZE, input) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 
     }
 
-
+    //close files to prevent memory leaks
     fclose(output);
     fclose(input);
 
