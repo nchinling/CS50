@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    //Open file. Name as input.
+    //If file has errors, print NULL.
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
@@ -20,6 +22,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    Declaration of variables
     const int BLOCK_SIZE = 512;
     BYTE buffer[BLOCK_SIZE];
     FILE *output = NULL;
