@@ -6,7 +6,7 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
 
- // Check command-line arguments. Only 1
+    // Check command-line arguments. Only 1
     if (argc != 2)
     {
         printf("Usage: ./recover filename\n");
