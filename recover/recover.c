@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
         {
-            if (count != NULL)
+            if (count != 0)
             {
                 fclose(output);
             }
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
             count = count + 1;
         }
 
-        if (output != NULL)
+        if (output != 0)
         {
             fwrite(buffer, 1, BLOCK_SIZE, output);
         }
