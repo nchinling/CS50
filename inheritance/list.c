@@ -1,41 +1,66 @@
-// Implements a list of numbers with an array of dynamic size using realloc
+// Implements a list of numbers with linked list
 
 #include <stdio.h>
 #include <stdlib.h>
 
+// Represents a node
+typedef struct node
+{
+    int number;
+    struct node *next;
+}
+node;
+
 int main(void)
 {
-    // List of size 3
-    int *list = malloc(3 * sizeof(int));
-    if (list == NULL)
+    // List of size 0
+    node *list = NULL;
+
+    // Add number to list
+    node *n = malloc(sizeof(node));
+    if (n == NULL)
     {
         return 1;
     }
+    n->number = 1;
+    n->next = NULL;
+    list = n;
 
-    // Initialize list of size 3 with numbers
-    list[0] = 1;
-    list[1] = 2;
-    list[2] = 3;
-
-    // Resize list to be of size 4
-    int *tmp = realloc(list, 4 * sizeof(int));
-    if (tmp == NULL)
+    // Add number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
     {
         free(list);
         return 1;
     }
-    list = tmp;
+    n->number = 2;
+    n->next = NULL;
+    list->next = n;
 
     // Add number to list
-    list[3] = 4;
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free(list->next);
+        free(list);
+        return 1;
+    }
+    n->number = 3;
+    n->next = NULL;
+    list->next->next = n;
 
     // Print list
-    for (int i = 0; i < 4; i++)
+    for (node *tmp = list; tmp != NULL; tmp = tmp->next)
     {
-        printf("%i\n", list[i]);
+        printf("%i\n", tmp->number);
     }
 
     // Free list
-    free(list);
+    while (list != NULL)
+    {
+        node *tmp = list->next;
+        free(list);
+        list = tmp;
+    }
     return 0;
 }
