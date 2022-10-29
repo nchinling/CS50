@@ -49,12 +49,12 @@ person *create_family(int generations)
     if (generations > 1)
     {
         // Create two new parents for current person by recursively calling create_family
-        p->parents[0] = create_family(generations - 1);
-        p->parents[1] = create_family(generations - 1);
+        person *parents0 = create_family(generations - 1);
+        person *parents1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        //p *alles0 = *child;
-        //p *parent1 = *child;
+        p -> parents[0] = parents0;
+        p -> parents[1] = parents1;
 
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
@@ -78,7 +78,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return p;
 }
 
 // Free `p` and all ancestors of `p`.
