@@ -53,12 +53,13 @@ person *create_family(int generations)
         p *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        p *alles0 = *child;
-        p *parent1 = *child;
+        //p *alles0 = *child;
+        //p *parent1 = *child;
 
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        char random_allele();
+        p -> alleles[0] = p->parents[0]->alleles[rand() % 2];
+        p -> alleles[1] = p->parents[1]->alleles[rand() % 2];
 
     }
 
