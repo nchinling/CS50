@@ -32,7 +32,7 @@ int main(void)
     }
 
     // Add number to list of size 4
-    tmp[3] = 4;
+    tmp[3] = 5;
 
     // Free list of size 3
     free(list);
