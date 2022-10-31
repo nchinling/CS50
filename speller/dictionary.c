@@ -54,6 +54,7 @@ bool load(const char *dictionary)
     list = n;
 
 
+// use a loop to scan each word//
     fscanf(file, "%s", word);
     return false;
 }
