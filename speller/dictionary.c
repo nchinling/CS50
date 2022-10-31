@@ -19,6 +19,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+// allocate memory for node
+node *n = malloc(sizeof(node));
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
