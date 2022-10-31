@@ -42,11 +42,18 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
    // allocate memory for node
-    node *n = malloc(sizeof(node));
-    strcpy (n -> word, "Hello");
-    n -> next = NULL;
 
-    
+    node *n = malloc(sizeof(node));
+     if (n == NULL)
+    {
+        return 1;
+    }
+
+    strcpy (n -> word, list);
+    n -> next = NULL;
+    list = n;
+
+
     fscanf(file, "%s", word);
     return false;
 }
