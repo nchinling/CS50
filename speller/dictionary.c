@@ -46,6 +46,8 @@ bool load(const char *dictionary)
     strcpy (n -> word, "Hello");
     n -> next = NULL;
 
+    
+    fscanf(file, "%s", word);
     return false;
 }
 
