@@ -21,6 +21,8 @@ node *table[N];
 
 // allocate memory for node
 node *n = malloc(sizeof(node));
+strcpy (n -> word, "Hello");
+n -> next = NULL;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -39,7 +41,11 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+   // allocate memory for node
+    node *n = malloc(sizeof(node));
+    strcpy (n -> word, "Hello");
+    n -> next = NULL;
+
     return false;
 }
 
