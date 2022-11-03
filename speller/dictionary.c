@@ -48,8 +48,8 @@ bool load(const char *dictionary)
 
         if (file == NULL)
         {
-        printf("There is an error. Unabe to load dictionary\n");
-        return 1;
+            printf("There is an error. Unabe to load dictionary\n");
+            return 1;
         }
 
     //create array to store words
@@ -58,17 +58,16 @@ bool load(const char *dictionary)
 
     while (file != EOF)
     {
-    node *n = malloc(sizeof(node));
+        node *n = malloc(sizeof(node));
 
-        if (n == NULL)
-        {
-        return 1;
-        }
+            if (n == NULL)
+            {
+                return 1;
+            }
 
-    strcpy(n->word, word);
+        strcpy(n->word, word);
     }
 
-    strcpy(n->word, word);
     hash_value = hash(word);
 
 
