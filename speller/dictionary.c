@@ -23,8 +23,8 @@ const unsigned int N = 26;
 node *table[N];
 
 //declare variables created
-int count;
-int hash_value;
+int count = 0;
+int hash_value = 0;
 
 
 // Returns true if word is in dictionary, else false
@@ -97,6 +97,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    if (count )
     return 0;
 }
 
