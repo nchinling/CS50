@@ -42,9 +42,9 @@ unsigned int hash(const char *word)
 
     int total = 0;
     for(int i = 0; i < strlen(word); i++)
-    (
-        total += (toupper(word[i]) - 'A'
-    )
+    {
+        total = total + (toupper(word[i]) - 'A') ;
+    }
     return total % N;
 }
 
