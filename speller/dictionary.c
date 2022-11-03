@@ -52,9 +52,9 @@ bool load(const char *dictionary)
     return 1;
    }
 
-    while (file != NULL)
+    while (file != EOF)
     {
-        
+
     }
 
     // node *n = malloc(sizeof(node));
