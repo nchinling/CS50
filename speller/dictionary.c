@@ -43,9 +43,9 @@ unsigned int hash(const char *word)
     int total = 0;
     for(int i = 0; i < strlen(word); i++)
     (
-        total = total + tolower
+        total = total + toupper(word[i] - 'A');
     )
-
+    return total % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
