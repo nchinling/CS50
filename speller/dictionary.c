@@ -44,13 +44,13 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-   FILE *file = fopen(dictionary, "r");
+    FILE *file = fopen(dictionary, "r");
 
-   if (file == NULL)
-   {
-    printf("There is an error. Unabe to load dictionary\n");
-    return 1;
-   }
+        if (file == NULL)
+        {
+        printf("There is an error. Unabe to load dictionary\n");
+        return 1;
+        }
 
     while (file != EOF)
     {
