@@ -74,7 +74,7 @@ bool load(const char *dictionary)
         //obtain hash value
         hash_value = hash(word);
 
-        //place node into linked-list. New word is placed onto header of list and previous header will 
+        //place node into linked-list. New word points onto header of list and previous header will
         n->next = table[hash_value];
         table[hash_value] = n;
     }
