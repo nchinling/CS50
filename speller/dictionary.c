@@ -64,9 +64,12 @@ bool load(const char *dictionary)
         {
         return 1;
         }
+
+    strcpy(n->word, word);
     }
 
-
+    strcpy(n->word, word);
+    hash_value = hash(word);
 
 
 // use a loop to scan each word//
