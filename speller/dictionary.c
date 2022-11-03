@@ -5,7 +5,7 @@
 
 #include "dictionary.h"
 
-// Represents a node in a hash table
+// Represents a node in a hash table. This is to create the linked-list.
 typedef struct node
 {
     char word[LENGTH + 1];
