@@ -22,10 +22,10 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
-// allocate memory for node
-//node *n = malloc(sizeof(node));
-//strcpy (n -> word, "Hello");
-//n -> next = NULL;
+//declare variables created
+int count;
+int hash_value;
+
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -74,18 +74,18 @@ bool load(const char *dictionary)
         //obtain hash value
         hash_value = hash(word);
 
-        //place node into linked-list. New word points onto header of list and previous header will
+        //place node into linked-list. New word points onto location of first word in list
+        //1. New word (next data) points onto location of first word in list
+        //2. Header will now point to new word
         n->next = table[hash_value];
         table[hash_value] = n;
+
+        //increase counter to keep track of words
+        count = count + 1;
     }
 
-
-
-
-// use a loop to scan each word//
-    //fopen(file, "%s", word)
-    //fscanf(file, "%s", word);
-    return false;
+    fclose(file);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
