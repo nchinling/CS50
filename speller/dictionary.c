@@ -52,8 +52,10 @@ bool load(const char *dictionary)
         return 1;
         }
 
+    fscanf(file, "s", word)
     while (file != EOF)
     {
+        
 
     }
 
