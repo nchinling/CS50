@@ -56,9 +56,7 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
 
     //scan file for string of words
-    fscanf(file, "%s", word);
-
-    while (file != EOF)
+    while(fscanf(file, "%s", word) != EOF)
     {
         //create memory for each new node
         node *n = malloc(sizeof(node));
