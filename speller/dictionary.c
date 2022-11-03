@@ -46,11 +46,22 @@ bool load(const char *dictionary)
 {
    FILE *file = fopen(dictionary, "r");
 
-    node *n = malloc(sizeof(node));
-     if (n == NULL)
+   if (file == NULL)
+   {
+    printf("There is an error. Unabe to load dictionary\n");
+    return 1;
+   }
+
+    while (file != NULL)
     {
-        return 1;
+        
     }
+
+    // node *n = malloc(sizeof(node));
+    //  if (n == NULL)
+    // {
+    //     return 1;
+    // }
 
 
 
