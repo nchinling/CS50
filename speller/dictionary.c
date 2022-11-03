@@ -52,14 +52,12 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    strcpy (n -> word, list);
-    n -> next = NULL;
-    list = n;
+
 
 
 // use a loop to scan each word//
     //fopen(file, "%s", word)
-    fscanf(file, "%s", word);
+    //fscanf(file, "%s", word);
     return false;
 }
 
