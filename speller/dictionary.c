@@ -52,10 +52,14 @@ bool load(const char *dictionary)
         return 1;
         }
 
-    fscanf(file, "s", word)
+    //create array to store words
+    char word[LENGTH + 1];
+    fscanf(file, "s", word);
+
     while (file != EOF)
     {
-        
+    node *n = malloc(sizeof(node));
+
 
     }
 
