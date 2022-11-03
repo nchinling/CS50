@@ -56,7 +56,7 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
 
     //scan file for string of words
-    fscanf(file, "s", word);
+    fscanf(file, "%s", word);
 
     while (file != EOF)
     {
