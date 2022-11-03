@@ -68,10 +68,18 @@ bool load(const char *dictionary)
                 return 1;
             }
 
+        //copy word from dictionary into node
         strcpy(n->word, word);
+
+        //obtain hash value
+        hash_value = hash(word);
+
+        //place node into linked-list. New word is placed onto header of list and previous header will 
+        n->next = table[hash_value];
+        table[hash_value] = n;
     }
 
-    hash_value = hash(word);
+
 
 
 // use a loop to scan each word//
