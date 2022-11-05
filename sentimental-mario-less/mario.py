@@ -2,16 +2,10 @@
 
 def main():
     height = get_height()
-    j = 0
     for i in range(height):
-        if (height - i) > j:
-            for j in range(height - i):
-                print("a", end="")
-
-        else:
+        for j in range(height):
             print("#", end="")
         print()
-
 
 def get_height():
     while True:
