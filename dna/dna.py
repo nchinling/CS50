@@ -47,8 +47,8 @@ def main():
     print(str_freq)
 
     # TODO: Check database for matching profiles
-    
-    database[0].values()
+
+    print(database[0].values())
 
 
     return
