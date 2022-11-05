@@ -3,13 +3,13 @@
 def main():
     height = get_height()
     for i in range(height):
-        for j in range(height - i):
-            while (height - i) > j:
+        if (height - i) > j:
+            for j in range(height - i):
                 print("a", end="")
-                j = j + 1
-            else:
-                print("#", end="")
-            print()
+
+        else:
+            print("#", end="")
+        print()
 
 
 def get_height():
