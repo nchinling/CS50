@@ -14,8 +14,8 @@ def main():
     with open(sys.argv[2]) as datafile:
         read_database = csv.DictReader(datafile)
         for data in read_database:
-            data["name"] = int(data["name"])
-            database.append(data)
+            print(data['name'])
+            database.append(data[1])
         print(f"{database}")
 
     # TODO: Read DNA sequence file into a variable
