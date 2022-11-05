@@ -52,25 +52,21 @@ def get_amount():
             else:
                 return int(100*n)
 
-# function to get amount from user
+# function to calculate quarters
 def calculate_quarters(amt):
 
     return int((amt) / 25)
 
-# function to get amount from user
+# function to calculate dimes
 def calculate_dimes(amt):
 
     return int((amt) / 10)
 
-# function to get amount from user
+# function to calculate nickels
 def calculate_nickel(amt):
 
     return int((amt) / 5)
 
-# # function to return penny
-# def calculate_penny(amt):
-
-#     return amt
 
 # run the program
 main()
