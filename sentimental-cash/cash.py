@@ -12,7 +12,6 @@ def main():
 
 # function to get height
 
-
 def get_amount():
     while True:
         try:
@@ -26,5 +25,13 @@ def get_amount():
             else:
                 return int(100*n)
 
+
 main()
 
+
+
+
+int calculate_quarters(int cents);
+int calculate_dimes(int cents);
+int calculate_nickels(int cents);
+int calculate_pennies(int cents);
