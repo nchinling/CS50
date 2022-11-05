@@ -17,12 +17,12 @@ def main():
 def get_amount():
     while True:
         try:
-            n = int(input("Amount($): "))
+            n = 100*(input("Amount($): "))
         except ValueError:
             print("That's not a change value!")
         else:
             if n > 0:
-                return 100*n
+                return n
 
 main()
 
