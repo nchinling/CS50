@@ -18,7 +18,7 @@ def main():
     teams = []
 
     # TODO: Read teams into memory from file
-    with open(argv[2]) as file:
+    with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         print(f"{reader}")
 
@@ -41,9 +41,9 @@ def simulate_game(team1, team2):
 def simulate_round(teams):
     """Simulate a round. Return a list of winning teams."""
     winners = []
-    for i in range(15):
-    winner = simulate_game()
-    winners.append(winner)
+    #for i in range(15):
+    #winner = simulate_game()
+    #winners.append(winner)
 
     # Simulate games for all pairs of teams
     for i in range(0, len(teams), 2):
