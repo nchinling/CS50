@@ -5,12 +5,36 @@ def main():
     amount = get_amount()
 
     print(f"Amount is {amount}")
-    print(f"Quarters: {calculate_quarters(amount)}")
+
+    # get number of quarters
+    quarters = calculate_quarters(amount)
+    print(f"Quarters: {quarters}")
+
+    # get balance from quarters
     balance_fq = amount - 25*calculate_quarters(amount)
     print(f"Balance is:{balance_fq}")
 
+    # get number of dimes
     dimes = calculate_dimes(balance_fq)
     print(f"Dimes is:{dimes}")
+
+    # get balance from dimes
+    balance_fd = balance_fq - 10*dimes
+    print(f"Balance from dimes is:{balance_fd}")
+
+    # get number of nickels
+    dimes = calculate_nickel(balance_fd)
+    print(f"Dimes is:{dimes}")
+
+    # get balance from nickels
+    balance_fd = balance_fq - 10*dimes
+    print(f"Balance from nickels is:{balance_fd}")
+
+
+
+
+
+
 
 
     # n_balance = d_balance - 5*calculate_nickel(d_balance)
