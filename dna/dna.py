@@ -52,14 +52,15 @@ def main():
     i = 0
     while (i < len(database)):
         person = list(database[i].values())
-        print(person)
+        #print(person)
         #print(person[0])
-        i += 1
+        #i += 1
 
     # obtain only the values
-    person_val = person[1:]
-    int_person_val = [eval(j) for j in person_val]
-    print(int_person_val)
+        person_val = person[1:]
+        int_person_val = [eval(j) for j in person_val]
+        print(int_person_val)
+        i += 1
 
 
     return
