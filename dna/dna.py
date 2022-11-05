@@ -49,7 +49,7 @@ def main():
     # TODO: Check database for matching profiles
 
     # convert dictionary of database values into a key
-    person = list(database[0].values())
+    person = list(database[1].values())
     print(person[0])
 
     # obtain only the values
