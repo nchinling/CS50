@@ -63,7 +63,7 @@ def count_sentences(text):
     number_of_sentences = 0
 
     for char in text:
-        if (char == "." or "?" or "!"):
+        if (char == "." or char == "?" or char == "!"):
             number_of_sentences += 1
 
     return number_of_sentences
