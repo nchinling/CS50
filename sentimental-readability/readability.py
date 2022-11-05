@@ -45,11 +45,14 @@ def count_letters(text):
 # function to count number of words
 def count_words(text):
 
+    number_of_spaces = 0
     number_of_words = 0
 
     for word in text:
         if word.isspace():
-            number_of_words += 1
+            number_of_spaces += 1
+
+    number_of_words = number_of_spaces+1
 
     return number_of_words
 
