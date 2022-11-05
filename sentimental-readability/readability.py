@@ -1,5 +1,8 @@
 # TODO
 
+# run main function
+main()
+
 def main():
     # get text from user
     text = get_text()
@@ -16,7 +19,6 @@ def get_text():
 
         else:
             return s
-
 
 # run main function
 main()
