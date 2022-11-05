@@ -1,8 +1,5 @@
 # TODO
 
-# run main function
-main()
-
 def main():
     # get text from user
     text = get_text()
