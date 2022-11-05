@@ -39,15 +39,15 @@ def main():
     print(len(subsequence_list))
 
     count = 0
+    str_freq = []
     while (count < len(subsequence_list)):
         print(longest_match(dnaseq, subsequence_list[count]))
-        str_freq = []
         str_freq.append(longest_match(dnaseq, subsequence_list[count]))
         count += 1
-        print(str_freq)
-
+    print(str_freq)
 
     # TODO: Check database for matching profiles
+    
 
     return
 
