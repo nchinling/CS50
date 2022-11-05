@@ -48,11 +48,14 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    
+    # convert dictionary of database values into a key
     person = list(database[0].values())
+    print(person[0])
+
+    # obtain only the values
     person_val = person[1:]
     #int_person_val = int(person_val)
-    print(int_person_val)
+    print(person_val)
 
 
     return
