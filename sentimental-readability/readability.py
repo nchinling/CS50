@@ -30,7 +30,12 @@ def cal_index(L, S):
 # function to calculate index
 def count_letters(text):
 
-    number_of_letters = len(text)
+    number_of_letters = 0
+
+    for letter in text:
+        if letter.isalpha():
+            number_of_letters += 1
+            
     return number_of_letters
 
 
