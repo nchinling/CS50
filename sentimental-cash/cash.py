@@ -35,21 +35,21 @@ def get_amount():
                 return int(100*n)
 
 
-def calculate_quarters(q):
+def calculate_quarters(amt):
 
-    return int((q) / 25)
+    return int((amt) / 25)
 
-def calculate_dimes(d):
+def calculate_dimes(amt):
 
-    return int((d) / 10)
+    return int((amt) / 10)
 
-def calculate_nickel(n):
+def calculate_nickel(amt):
 
-    return int((n) / 5)
+    return int((amt) / 5)
 
-def calculate_penny(p):
+def calculate_penny(amt):
 
-    return int((p) / 1)
+    return amt
 
 main()
 
