@@ -9,7 +9,7 @@ def main():
     balance_fq = amount - 25*calculate_quarters(amount)
     print(f"Balance is:{balance_fq}")
 
-    d_balance = balance_fq - calculate_dimes(balance_fq)
+    d_balance = balance_fq - 10*calculate_dimes(balance_fq)
     print(f"dBalance is:{d_balance}")
 
 
