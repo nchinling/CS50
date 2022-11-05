@@ -9,8 +9,6 @@ def main():
     print(f"Text is: {text}")
     print(f"Total letters: {total_letters}")
 
-    printf
-
 
 # function to get text from user
 def get_text():
@@ -32,7 +30,7 @@ def cal_index(L, S):
 # function to calculate index
 def count_letters(text):
 
-    number_of_letters = len(isalpha(text))
+    number_of_letters = len(text)
     return number_of_letters
 
 
