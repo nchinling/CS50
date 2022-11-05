@@ -33,9 +33,12 @@ def main():
 
     # for debugging
     print(subsequence_list)
+    print(len(subsequence_list))
 
-
-    print(longest_match(dnaseq, subsequence_list[2]))
+    count = 0
+    while (count < len(subsequence_list)):
+        print(longest_match(dnaseq, subsequence_list[count]))
+        count += 1
 
     # TODO: Check database for matching profiles
 
