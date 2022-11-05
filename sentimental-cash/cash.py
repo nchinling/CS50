@@ -17,11 +17,11 @@ def main():
 def get_amount():
     while True:
         try:
-            n = input("Amount($): ")
+            n = int(input("Amount($): "))
         except ValueError:
             print("That's not a change value!")
         else:
-            if get_float(n > 0:
+            if n > 0:
                 return n
 
 main()
