@@ -25,10 +25,10 @@ def cal_index(L, S):
     return index
 
 # function to calculate index
-def cal_index(L, S):
+def count_letters(text):
 
     index = 0.0588 * L - 0.296 * S - 15.8
-    return index
+    return number_of_letters
 
 
 # run main function
