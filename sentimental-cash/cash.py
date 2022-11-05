@@ -15,12 +15,12 @@ def main():
 
 
 def get_amount():
-    while True:
-        try:
-            n = 100*(input("Amount($): "))
-        except ValueError:
-            print("That's not a change value!")
-        else:
+    #while True:
+        #try:
+            n = get_float(input("Amount($): "))
+        #except ValueError:
+            #print("That's not a change value!")
+        #else:
             if n > 0:
                 return n
 
