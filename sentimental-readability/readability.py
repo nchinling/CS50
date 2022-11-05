@@ -13,6 +13,11 @@ def main():
     print(f"Total words: {total_words}")
     print(f"Total sentences: {total_sentences}")
 
+    av_letters = average_letters(total_letters, total_words)
+    av_sentences = average_sentences(total_sentences, total_words)
+    index = cal_index(av_letters, av_sentences)
+    print(f"Grade {index}")
+
 
 # function to get text from user
 def get_text():
@@ -68,8 +73,20 @@ def count_sentences(text):
 
     return number_of_sentences
 
-# function to count number of words
-def average_letters(text):
+# Function to calculate average number of letters per hundred words
+def average_letters(letters,words):
+
+    average = (letters/words)*100
+
+    return average
+
+# Function to calculate average number of sentences per hundred words
+def average_sentences(sentences,words):
+
+    average = (sentences/words)*100
+
+    return average
+
 
 
 # run main function
