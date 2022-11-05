@@ -6,11 +6,12 @@ def main():
     text = get_text()
     total_letters = count_letters(text)
     total_words = count_words(text)
-    #total_sentences = count_sentences(text)
+    total_sentences = count_sentences(text)
 
     print(f"Text is: {text}")
     print(f"Total letters: {total_letters}")
     print(f"Total words: {total_words}")
+    print(f"Total sentences: {total_sentences}")
 
 
 # function to get text from user
@@ -55,6 +56,18 @@ def count_words(text):
     number_of_words = number_of_spaces+1
 
     return number_of_words
+
+# function to count number of words
+def count_sentences(text):
+
+    number_of_spaces = 0
+    number_of_sentences = 0
+
+    for char in text:
+        if char.isspace():
+            number_of_sentences += 1
+
+    return number_of_sentences
 
 # run main function
 main()
