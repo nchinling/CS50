@@ -25,7 +25,7 @@ def get_height():
         except ValueError:
             print("That's not an integer!")
         else:
-            if n > 0 and n >= 9:
+            if n > 0 and n < 9:
                 return n
 
 
