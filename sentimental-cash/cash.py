@@ -37,20 +37,7 @@ def main():
     #total number of coins
     total = quarters + dimes + nickels + pennies
     print(f"Total coins:{total}")
-
-
-
-
-
-
-
-    # n_balance = d_balance - 5*calculate_nickel(d_balance)
-    # p_balance = n_balance - calculate_penny(n_balance)
-    # total_coins = q_balance + d_balance + n_balance + p_balance
-    # print((f"Total coins is:{total_coins}"))
-
-
-# function to get amount from user
+    
 
 def get_amount():
     while True:
@@ -83,11 +70,3 @@ def calculate_penny(amt):
     return amt
 
 main()
-
-
-
-
-# int calculate_quarters(int cents);
-# int calculate_dimes(int cents);
-# int calculate_nickels(int cents);
-# int calculate_pennies(int cents);
