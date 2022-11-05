@@ -18,6 +18,7 @@ def main():
     index = round(cal_index(av_letters, av_sentences))
     print(f"Grade {index}")
 
+def print(index)
 
 # function to get text from user
 def get_text():
