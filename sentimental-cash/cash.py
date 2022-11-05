@@ -10,12 +10,13 @@ def main():
     print(f"Balance is:{balance_fq}")
 
     d_balance = balance_fq - calculate_dimes(balance_fq)
+    print(f"dBalance is:{d_balance}")
 
 
-    n_balance = d_balance - 5*calculate_nickel(d_balance)
-    p_balance = n_balance - calculate_penny(n_balance)
-    total_coins = q_balance + d_balance + n_balance + p_balance
-    print((f"Total coins is:{total_coins}"))
+    # n_balance = d_balance - 5*calculate_nickel(d_balance)
+    # p_balance = n_balance - calculate_penny(n_balance)
+    # total_coins = q_balance + d_balance + n_balance + p_balance
+    # print((f"Total coins is:{total_coins}"))
 
 
 # function to get amount from user
