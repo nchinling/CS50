@@ -38,7 +38,7 @@ def main():
     print(subsequence_list)
     print(len(subsequence_list))
 
-    # create 
+    # obtain frequency of each 
     count = 0
     str_freq = []
     while (count < len(subsequence_list)):
