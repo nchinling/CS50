@@ -12,7 +12,7 @@ def main():
 
     # get balance from quarters
     balance_fq = amount - 25*calculate_quarters(amount)
-    print(f"Balance is:{balance_fq}")
+    #print(f"Balance is:{balance_fq}")
 
     # get number of dimes
     dimes = calculate_dimes(balance_fq)
@@ -20,15 +20,15 @@ def main():
 
     # get balance from dimes
     balance_fd = balance_fq - 10*dimes
-    print(f"Balance from dimes is:{balance_fd}")
+    #print(f"Balance from dimes is:{balance_fd}")
 
     # get number of nickels
     nickels = calculate_nickel(balance_fd)
-    print(f"Dimes is:{nickels}")
+    print(f"Nickels is:{nickels}")
 
     # get balance from nickels
     balance_fn = balance_fd - 5*dimes
-    print(f"Balance from nickels is:{balance_fn}")
+    #print(f"Balance from nickels is:{balance_fn}")
 
     # get number of pennies
     pennies = balance_fn
