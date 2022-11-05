@@ -48,6 +48,8 @@ def main():
 
     # TODO: Check database for matching profiles
     
+    database[0].values()
+
 
     return
 
