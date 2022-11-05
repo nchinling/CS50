@@ -4,9 +4,8 @@ def main():
     height = get_height()
     for i in range(height):
         for j in range(height - i):
-            if (height - i) > i:
+            if (height - i) > j + 1:
                 print("", end="")
-                i += 1
             else:
                 print("#", end="")
         print()
