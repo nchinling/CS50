@@ -42,7 +42,7 @@ def main():
     count = 0
     str_freq = []
     while (count < len(subsequence_list)):
-        print(longest_match(dnaseq, subsequence_list[count]))
+        #print(longest_match(dnaseq, subsequence_list[count]))
         str_freq.append(longest_match(dnaseq, subsequence_list[count]))
         count += 1
     #print(str_freq)
