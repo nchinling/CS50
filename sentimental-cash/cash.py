@@ -6,8 +6,14 @@ def main():
 
     print(f"Amount is {amount}")
     print(f"Quarters: {calculate_quarters(amount)}")
-    balance = amount - 25*calculate_quarters(amount)
-    print(f"Balance is:{balance}")
+    q_balance = amount - 25*calculate_quarters(amount)
+    print(f"Balance is:{q_balance}")
+
+    d_balance = q_balance - 10*calculate_dimes(q_balance)
+    n_balance = d_balance - 5*calculate_dimes(d_balance)
+    p_balance = n_balance - calculate_dimes(n_balance)
+    total_coins = q_balance + d_balance + n_balance + p_balance
+    print((f"Total coins is:{total_coins}"))
 
 
 # function to get amount from user
@@ -26,21 +32,21 @@ def get_amount():
                 return int(100*n)
 
 
-def calculate_quarters(amount):
+def calculate_quarters(q):
 
-    return int((amount) / 25)
+    return int((q) / 25)
 
-def calculate_dimes(amount):
+def calculate_dimes(d):
 
-    return int((amount) / 10)
+    return int((d) / 10)
 
-def calculate_nickel(amount):
+def calculate_nickel(n):
 
-    return int((amount) / 5)
+    return int((n) / 5)
 
-def calculate_penny(amount):
+def calculate_penny(p):
 
-    return int((amount) / 1)
+    return int((p) / 1)
 
 main()
 
