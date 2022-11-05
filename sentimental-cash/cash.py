@@ -5,7 +5,7 @@ def main():
     # get amount from user
     amount = get_amount()
     print(f"{amount}")
-
+return 0
 
 
 
