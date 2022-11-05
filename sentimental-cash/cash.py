@@ -1,5 +1,7 @@
 # TODO
 from cs50 import get_float
+from cs50 import get_int
+
 
 def main():
     # get amount from user
