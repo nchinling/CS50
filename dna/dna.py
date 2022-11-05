@@ -14,7 +14,7 @@ def main():
     with open(sys.argv[2]) as datafile:
         read_database = csv.DictReader(datafile)
         for data in read_database:
-            print(data)
+            print(dict(data))
             #database.append(data[1])
         print(f"{database}")
 
