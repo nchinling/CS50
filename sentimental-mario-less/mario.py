@@ -2,6 +2,7 @@
 
 def main():
     height = get_height()
+    j = 0
     for i in range(height):
         if (height - i) > j:
             for j in range(height - i):
