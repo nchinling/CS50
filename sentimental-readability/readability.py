@@ -19,11 +19,17 @@ def get_text():
             return s
 
 # function to calculate index
-def cal_index():
-    # get text from user
-    text = get_text()
+def cal_index(L, S):
 
-    print(f"Text is: {text}")
+    index = 0.0588 * L - 0.296 * S - 15.8
+    return index
+
+# function to calculate index
+def cal_index(L, S):
+
+    index = 0.0588 * L - 0.296 * S - 15.8
+    return index
+
 
 # run main function
 main()
