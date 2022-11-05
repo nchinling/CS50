@@ -34,18 +34,12 @@ def main():
     # remove 'name' from list
     subsequence_list = list(full_list[1:])
 
-    # for debugging
-    #print(subsequence_list)
-    #print(len(subsequence_list))
-
     # obtain frequency of each STR
     count = 0
     str_freq = []
     while (count < len(subsequence_list)):
-        #print(longest_match(dnaseq, subsequence_list[count]))
         str_freq.append(longest_match(dnaseq, subsequence_list[count]))
         count += 1
-    #print(str_freq)
 
     # TODO: Check database for matching profiles
 
@@ -53,14 +47,10 @@ def main():
     i = 0
     while (i < len(database)):
         person = list(database[i].values())
-        #print(person)
-        #print(person[0])
-        #i += 1
 
     # obtain only the values
         person_val = person[1:]
         int_person_val = [eval(j) for j in person_val]
-        #print(int_person_val)
 
         #compare list of values
         if str_freq == int_person_val:
@@ -69,7 +59,6 @@ def main():
         i += 1
     if str_freq != int_person_val:
         print("No match")
-
 
     return
 
