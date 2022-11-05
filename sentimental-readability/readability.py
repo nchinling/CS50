@@ -60,11 +60,10 @@ def count_words(text):
 # function to count number of words
 def count_sentences(text):
 
-    number_of_spaces = 0
     number_of_sentences = 0
 
     for char in text:
-        if char.isspace():
+        if char.count("." or "!" or "?"):
             number_of_sentences += 1
 
     return number_of_sentences
