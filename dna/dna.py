@@ -15,13 +15,11 @@ def main():
         read_database = csv.DictReader(datafile)
         for data in read_database:
             database.append(data)
-        #print(f"{database}")
 
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as textfile:
         dnaseq = textfile.read()
-        #print(dnaseq)
 
     # TODO: Find longest match of each STR in DNA sequence
 
@@ -52,7 +50,7 @@ def main():
         person_val = person[1:]
         int_person_val = [eval(j) for j in person_val]
 
-        #compare list of values
+        # compare list of values
         if str_freq == int_person_val:
             print(person[0])
             break
