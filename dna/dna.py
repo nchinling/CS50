@@ -11,7 +11,7 @@ def main():
     # TODO: Read database file into a variable
     database = []
 
-    with open(sys.argv[2]) as datafile:
+    with open(sys.argv[1]) as datafile:
         read_database = csv.DictReader(datafile)
         for data in read_database:
             print(dict(data))
