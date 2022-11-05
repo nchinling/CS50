@@ -48,8 +48,8 @@ def count_words(text):
     number_of_words = 0
 
     for word in text:
-        word.isspace()
-        number_of_words += 1
+        if word.isspace():
+            number_of_words += 1
 
     return number_of_words
 
