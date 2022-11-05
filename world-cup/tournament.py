@@ -44,6 +44,7 @@ def simulate_round(teams):
     for i in range(len(teams)):
         winner = simulate_game()
         winners.append(winner)
+        i += 2
     return winners
 
     # Simulate games for all pairs of teams
