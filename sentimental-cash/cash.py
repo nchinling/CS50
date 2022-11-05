@@ -1,8 +1,8 @@
 # TODO
 
 def main():
-    # get height from user
-    height = get_height()
+    # get amount from user
+    amount = get_amount()
 
     # print number of rows
     for i in range(height):
@@ -21,7 +21,7 @@ def main():
 def get_height():
     while True:
         try:
-            n = int(input("Height: "))
+            n = int(input("Amount($): "))
         except ValueError:
             print("That's not an integer!")
         else:
