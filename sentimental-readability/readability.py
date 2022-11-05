@@ -1,4 +1,5 @@
 # TODO
+import string
 
 def main():
     # get text from user
