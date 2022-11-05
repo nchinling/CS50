@@ -5,7 +5,7 @@ def main():
     for i in range(height):
         for j in range(height - i):
             while (height - i) > j:
-                print("", end="")
+                print("a", end="")
                 j = j + 1
             else:
                 print("#", end="")
