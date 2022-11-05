@@ -36,8 +36,6 @@ def main():
         else:
             counts[winner] = 1
 
-
-
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
@@ -68,11 +66,12 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
     while len(teams) > 1:
-        #repeat until one team is left
+        # repeat until one team is left
         teams = simulate_round(teams)
 
-    #return name of winning team
+    # return name of winning team
     return teams[0]["team"]
+
 
 if __name__ == "__main__":
     main()
