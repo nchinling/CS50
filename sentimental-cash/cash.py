@@ -4,7 +4,7 @@ from cs50 import get_float
 def main():
     # get amount from user
     amount = get_amount()
-    print(f"Amount is{amount}")
+    print(f"Amount is {amount}")
 
 
 
