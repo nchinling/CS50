@@ -15,13 +15,13 @@ def main():
         read_database = csv.DictReader(datafile)
         for data in read_database:
             database.append(data)
-        print(f"{database}")
+        #print(f"{database}")
 
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as textfile:
         dnaseq = textfile.read()
-        print(dnaseq)
+        #print(dnaseq)
 
     # TODO: Find longest match of each STR in DNA sequence
 
@@ -35,8 +35,8 @@ def main():
     subsequence_list = list(full_list[1:])
 
     # for debugging
-    print(subsequence_list)
-    print(len(subsequence_list))
+    #print(subsequence_list)
+    #print(len(subsequence_list))
 
     # obtain frequency of each STR
     count = 0
@@ -45,7 +45,7 @@ def main():
         print(longest_match(dnaseq, subsequence_list[count]))
         str_freq.append(longest_match(dnaseq, subsequence_list[count]))
         count += 1
-    print(str_freq)
+    #print(str_freq)
 
     # TODO: Check database for matching profiles
 
@@ -60,7 +60,7 @@ def main():
     # obtain only the values
         person_val = person[1:]
         int_person_val = [eval(j) for j in person_val]
-        print(int_person_val)
+        #print(int_person_val)
 
         #compare list of values
         if str_freq == int_person_val:
