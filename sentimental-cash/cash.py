@@ -19,9 +19,9 @@ def get_amount():
             n = float(input("Amount($): "))
         except ValueError:
             print("That's not a change value!")
-        elif:
-            if n <= 0:
-                print("That's not a change value!")
+        except n <= 0:
+            print("That's not a change value!")
+
         else:
             if n > 0:
                 return int(100*n)
