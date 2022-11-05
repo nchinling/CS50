@@ -3,8 +3,12 @@
 def main():
     # get text from user
     text = get_text()
+    total_letters = count_letters(text)
 
     print(f"Text is: {text}")
+    print(f"Total letters: {total_letters}")
+
+    printf
 
 
 # function to get text from user
