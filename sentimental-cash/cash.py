@@ -6,10 +6,10 @@ def main():
 
     print(f"Amount is {amount}")
     print(f"Quarters: {calculate_quarters(amount)}")
-    q_balance = amount - 25*calculate_quarters(amount)
-    print(f"Balance is:{q_balance}")
+    balance_fq = amount - 25*calculate_quarters(amount)
+    print(f"Balance is:{balance_fq}")
 
-    d_balance = q_balance - 10*calculate_dimes(q_balance)
+    d_balance = balance_fq - 10*calculate_dimes(balance_fq)
 
 
     n_balance = d_balance - 5*calculate_nickel(d_balance)
