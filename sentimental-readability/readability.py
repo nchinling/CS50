@@ -27,7 +27,7 @@ def cal_index(L, S):
 # function to calculate index
 def count_letters(text):
 
-    index = 0.0588 * L - 0.296 * S - 15.8
+    number_of_letters = len(isalpha(text))
     return number_of_letters
 
 
