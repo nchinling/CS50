@@ -24,7 +24,7 @@ def main():
         print(dnaseq)
 
     # TODO: Find longest match of each STR in DNA sequence
-        print(longest_match(dnaseq, database[dict.keys]))
+        print(longest_match(dnaseq, database[0][data.keys()]))
 
     # TODO: Check database for matching profiles
 
