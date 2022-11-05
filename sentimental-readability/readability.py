@@ -16,9 +16,17 @@ def main():
     av_letters = average_letters(total_letters, total_words)
     av_sentences = average_sentences(total_sentences, total_words)
     index = round(cal_index(av_letters, av_sentences))
-    print(f"Grade {index}")
+    printspecial(index)
 
-def print(index)
+def printspecial(index):
+    if index < 1:
+        print(f"Before Grade 1")
+
+    elif index >= 16:
+        print(f"Grade 16+")
+
+    else:
+        print(f"Grade {index}")
 
 # function to get text from user
 def get_text():
