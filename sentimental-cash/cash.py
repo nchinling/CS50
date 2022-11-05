@@ -6,8 +6,8 @@ def main():
 
     print(f"Amount is {amount}")
     print(f"Quarters: {calculate_quarters(amount)}")
-    balance = amount - calculate_quarters(amount)
-    print(balance)
+    balance = amount - 25*calculate_quarters(amount)
+    print(f"Balance is:{balance}")
 
 
 # function to get amount from user
