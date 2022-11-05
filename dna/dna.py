@@ -66,8 +66,6 @@ def main():
         if str_freq == int_person_val:
             print(f"Person is {person[0]}")
             break
-        else:
-            print("No match")
         i += 1
 
 
