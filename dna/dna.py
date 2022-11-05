@@ -18,10 +18,9 @@ def main():
         print(f"{database}")
 
     # TODO: Read DNA sequence file into a variable
-    dnaseq = []
 
     with open(sys.argv[2]) as textfile:
-        dnaseq.append(textfile.read())
+        dnaseq = textfile.read()
         print(dnaseq)
 
     # TODO: Find longest match of each STR in DNA sequence
