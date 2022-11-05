@@ -46,6 +46,7 @@ def main():
         count += 1
         print(str_freq)
 
+
     # TODO: Check database for matching profiles
 
     return
