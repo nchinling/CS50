@@ -29,11 +29,14 @@ def main():
     subsequence = database[0].keys()
 
     # form change dictionary key values to a list
-    subsequence_list = list(subsequence[1:])
+    full_list = list(subsequence)
+
+    # remove 'name' from list
+    subsequence_list = list(full_list[1:])
 
     # for debugging
     print(subsequence_list)
-    print(len(subsequence_list[1:]))
+    print(len(subsequence_list))
 
     count = 0
     while (count < len(subsequence_list)):
