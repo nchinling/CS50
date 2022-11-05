@@ -9,8 +9,8 @@ def main():
     balance_fq = amount - 25*calculate_quarters(amount)
     print(f"Balance is:{balance_fq}")
 
-    d_balance = balance_fq - 10*calculate_dimes(balance_fq)
-    print(f"dBalance is:{d_balance}")
+    dimes = calculate_dimes(balance_fq)
+    print(f"Dimes is:{dimes}")
 
 
     # n_balance = d_balance - 5*calculate_nickel(d_balance)
