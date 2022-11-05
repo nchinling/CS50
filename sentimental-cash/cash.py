@@ -10,8 +10,10 @@ def main():
     print(f"Balance is:{q_balance}")
 
     d_balance = q_balance - 10*calculate_dimes(q_balance)
-    n_balance = d_balance - 5*calculate_dimes(d_balance)
-    p_balance = n_balance - calculate_dimes(n_balance)
+
+
+    n_balance = d_balance - 5*calculate_nickel(d_balance)
+    p_balance = n_balance - calculate_penny(n_balance)
     total_coins = q_balance + d_balance + n_balance + p_balance
     print((f"Total coins is:{total_coins}"))
 
