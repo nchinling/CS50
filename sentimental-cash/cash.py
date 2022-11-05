@@ -1,7 +1,4 @@
 # TODO
-from cs50 import get_float
-from cs50 import get_int
-
 
 def main():
     # get amount from user
@@ -18,11 +15,14 @@ def main():
 
 def get_amount():
     while True:
-        #try:
+        try:
             n = float(input("Amount($): "))
-        #except ValueError:
-            #print("That's not a change value!")
-        #else:
+        except ValueError or n <= 0 :
+            print("That's not a change value!")
+        # else:
+        #     if n <= 0:
+        #        print("That's not a change value!")
+        else:
             if n > 0:
                 return int(100*n)
 
