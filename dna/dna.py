@@ -64,7 +64,7 @@ def main():
 
         #compare list of values
         if str_freq == int_person_val:
-            print(f"Person is {person[0]}")
+            print(f"{person[0]}")
             break
         i += 1
     if str_freq != int_person_val:
