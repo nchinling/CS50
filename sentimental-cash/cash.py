@@ -22,7 +22,7 @@ def get_amount():
             print("That's not a change value!")
         else:
             if n > 0:
-                return n
+                return 100*n
 
 main()
 
