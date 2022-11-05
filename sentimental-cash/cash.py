@@ -37,12 +37,12 @@ def main():
     #total number of coins
     total = quarters + dimes + nickels + pennies
     print(f"Total coins:{total}")
-    
+
 
 def get_amount():
     while True:
         try:
-            n = float(input("Amount($): "))
+            n = float(input("Change owed($): "))
         except ValueError:
             print("That's not a change value!")
 
