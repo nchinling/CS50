@@ -24,7 +24,18 @@ def main():
         print(dnaseq)
 
     # TODO: Find longest match of each STR in DNA sequence
-        print(longest_match(dnaseq, database[0][data.keys()]))
+
+    # obtain key values from database
+    subsequence = database[0].keys()
+
+    # form change dictionary key values to a list
+    subsequence_list = list(subsequence)
+
+    # for debugging
+    print(subsequence_list)
+
+
+    print(longest_match(dnaseq, subsequence_list[2]))
 
     # TODO: Check database for matching profiles
 
