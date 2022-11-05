@@ -24,5 +24,5 @@ def get_amount():
                 return n
 
 
-main()
+#main()
 
