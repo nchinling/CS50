@@ -48,8 +48,8 @@ def count_words(text):
     number_of_words = 0
 
     for word in text:
-        countif 
-            number_of_words += 1
+        text.countif(" ")
+        number_of_words += 1
 
     return number_of_words
 
