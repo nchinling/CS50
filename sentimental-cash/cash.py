@@ -34,9 +34,10 @@ def main():
     pennies = balance_fn
     print(f"Pennies is:{pennies}")
 
-    #total number of coins
+    # total number of coins
     total = quarters + dimes + nickels + pennies
     print(f"Total coins:{total}")
+
 
 # function to get amount from user
 def get_amount():
@@ -52,15 +53,18 @@ def get_amount():
             else:
                 return int(100*n)
 
+
 # function to calculate quarters
 def calculate_quarters(amt):
 
     return int((amt) / 25)
 
+
 # function to calculate dimes
 def calculate_dimes(amt):
 
     return int((amt) / 10)
+
 
 # function to calculate nickels
 def calculate_nickel(amt):
