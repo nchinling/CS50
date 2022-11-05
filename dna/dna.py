@@ -48,8 +48,11 @@ def main():
 
     # TODO: Check database for matching profiles
 
+    
     person = list(database[0].values())
-    print(person)
+    person_val = person[1:]
+    #int_person_val = int(person_val)
+    print(int_person_val)
 
 
     return
