@@ -18,6 +18,7 @@ def main():
     teams = []
 
     # TODO: Read teams into memory from file
+    filename = open("phonebook.csv", "a")
     with open(filename) as file:
         reader = csv.DictReader(file)
         print(f"{reader}")
