@@ -61,6 +61,11 @@ def main():
         person_val = person[1:]
         int_person_val = [eval(j) for j in person_val]
         print(int_person_val)
+
+        #compare list of values
+        if str_freq == int_person_val:
+            print(f"Person is {person[0][i]}")
+            break
         i += 1
 
 
