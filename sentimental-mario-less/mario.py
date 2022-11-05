@@ -5,9 +5,7 @@ def main():
     for i in range(height):
         for j in range(height - (i+1)):
             print("#", end = "")
-            while i+1 > 0:
-                print("a",end = "")
-                i = i - 1
+
         print()
 
 def get_height():
