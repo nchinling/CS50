@@ -23,13 +23,19 @@ def main():
     print(f"Balance from dimes is:{balance_fd}")
 
     # get number of nickels
-    dimes = calculate_nickel(balance_fd)
-    print(f"Dimes is:{dimes}")
+    nickels = calculate_nickel(balance_fd)
+    print(f"Dimes is:{nickels}")
 
     # get balance from nickels
-    balance_fd = balance_fq - 10*dimes
-    print(f"Balance from nickels is:{balance_fd}")
+    balance_fn = balance_fd - 5*dimes
+    print(f"Balance from nickels is:{balance_fn}")
 
+    # get number of pennies
+    pennies = balance_fn
+
+    #total number of coins
+    total = quarters + dimes + nickels + pennies
+    print(f"Total coins:{total}")
 
 
 
