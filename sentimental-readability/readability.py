@@ -48,7 +48,7 @@ def count_words(text):
     number_of_words = 0
 
     for word in text:
-        if word.isword():
+        countif 
             number_of_words += 1
 
     return number_of_words
