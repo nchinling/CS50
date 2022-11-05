@@ -40,13 +40,7 @@ def simulate_game(team1, team2):
 
 def simulate_round(teams):
     """Simulate a round. Return a list of winning teams."""
-    winners = []
-    for i in range(len(teams)):
-        winner = simulate_game()
-        winners.append(winner)
-        i += 2
-    return winners
-
+    
     # Simulate games for all pairs of teams
     for i in range(0, len(teams), 2):
         if simulate_game(teams[i], teams[i + 1]):
