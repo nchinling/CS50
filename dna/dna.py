@@ -14,7 +14,7 @@ def main():
     with open(sys.argv[2]) as file:
         reader = csv.DictReader(file)
         for dna in reader:
-            dna[1:] = int(dna["rating"])
+            dna["name"] = int(dna["name"])
             database.append(dna)
         print(f"{database}")
 
