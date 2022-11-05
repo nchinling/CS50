@@ -19,14 +19,9 @@ def main():
         print(f"{database}")
 
     # TODO: Read DNA sequence file into a variable
-    dnaseq = []
+    dnaseq = [sys.argv[2]]
 
-    with open(sys.argv[3]) as dnafile:
-        read_seq = csv.DictReader(dnafile)
-        for dna in read_seq:
-            dna["name"] = int(data["name"])
-            database.append(data)
-        print(f"{dnaseq}")
+    dnafile = open()
 
     # TODO: Find longest match of each STR in DNA sequence
 
