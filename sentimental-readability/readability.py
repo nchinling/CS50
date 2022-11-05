@@ -69,7 +69,7 @@ def count_sentences(text):
     return number_of_sentences
 
 # function to count number of words
-def average_calculator(text):
+def average_letters(text):
 
 
 # run main function
