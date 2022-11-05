@@ -15,14 +15,14 @@ def main():
 
 
 def get_amount():
-    #while True:
+    while True:
         #try:
-            n = get_float(input("Amount($): "))
+            n = float(input("Amount($): "))
         #except ValueError:
             #print("That's not a change value!")
         #else:
             if n > 0:
-                return n
+                return int(100*n)
 
 main()
 
