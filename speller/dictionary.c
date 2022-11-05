@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -23,14 +24,32 @@ const unsigned int N = 26;
 node *table[N];
 
 //declare variables created
-int count = 0;
-int hash_value = 0;
+// int count;
+// int hash_value;
+
+unsigned int count = 0;
+unsigned int hash_value = 0;
 
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    hash_value = hash(word);
+
+    //create cursor node to traverse linked-list
+    node *cursor = table[hash_value];
+
+    //Traverse the linked-list
+    while (cursor != NULL)
+    {
+        if (strcasecmp(word, cursor->word) == 0)
+        {
+            return true;
+        }
+        //move to next node if doesn't match
+        cursor = cursor->next;
+    }
+
     return false;
 }
 
@@ -40,10 +59,11 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     //return toupper(word[0]) - 'A';
 
-    int total = 0;
-    for(int i = 0; i < strlen(word); i++)
+    unsigned long total = 0;
+    for (int i = 0; i < strlen(word); i++)
     {
-        total = total + (toupper(word[i]) - 'A') ;
+        //total = total + (toupper(word[i]) - 'A') ;
+        total = total + tolower(word[i]);
     }
     return total % N;
 }
@@ -53,25 +73,25 @@ bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary, "r");
 
-        if (file == NULL)
-        {
-            printf("There is an error. Unabe to load dictionary\n");
-            return 1;
-        }
+    if (file == NULL)
+    {
+        printf("There is an error. Unable to load dictionary\n");
+        return false;
+    }
 
     //create array to store words
     char word[LENGTH + 1];
 
     //scan file for string of words
-    while(fscanf(file, "%s", word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         //create memory for each new node
         node *n = malloc(sizeof(node));
 
-            if (n == NULL)
-            {
-                return 1;
-            }
+        if (n == NULL)
+        {
+            return false;
+        }
 
         //copy word from dictionary into node
         strcpy(n->word, word);
@@ -90,6 +110,7 @@ bool load(const char *dictionary)
     }
 
     fclose(file);
+
     return true;
 }
 
@@ -108,5 +129,21 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < N; i++)
+    {
+        node *cursor = table[i];
+        node *temp_cursor = table[i];
+
+        while (cursor)
+        {
+            //create temporary cursor to hold cursor location
+            //node *temp_cursor = cursor;
+            temp_cursor = cursor;
+            //move cursor to next node
+            cursor = cursor->next;
+            free(temp_cursor);
+        }
+    }
+
+    return true;
 }
