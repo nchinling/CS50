@@ -5,9 +5,12 @@ def main():
     # get text from user
     text = get_text()
     total_letters = count_letters(text)
+    total_words = count_words(text)
+    #total_sentences = count_sentences(text)
 
     print(f"Text is: {text}")
     print(f"Total letters: {total_letters}")
+    print(f"Total words: {total_words}")
 
 
 # function to get text from user
@@ -27,7 +30,7 @@ def cal_index(L, S):
     index = 0.0588 * L - 0.296 * S - 15.8
     return index
 
-# function to calculate index
+# function to count number of letters
 def count_letters(text):
 
     number_of_letters = 0
@@ -35,9 +38,20 @@ def count_letters(text):
     for letter in text:
         if letter.isalpha():
             number_of_letters += 1
-            
+
     return number_of_letters
 
+
+# function to count number of words
+def count_words(text):
+
+    number_of_words = 0
+
+    for word in text:
+        if letter.isalpha():
+            number_of_words += 1
+
+    return number_of_words
 
 # run main function
 main()
