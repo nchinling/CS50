@@ -9,7 +9,7 @@ def main():
                 j = j + 1
             else:
                 print("#", end="")
-        print()
+            print()
 
 
 def get_height():
