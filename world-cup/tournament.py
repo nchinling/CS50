@@ -11,15 +11,14 @@ N = 1000
 def main():
 
     # Ensure correct usage
-    # There can only be 2 arguments as the first is name of source code and second is filename (either men's or women's team)
+    # There can only be 3 arguments as the first is 'python', second is 'tournament.py', third is filename (either men's or women's team)
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
 
     # TODO: Read teams into memory from file
-    filename = open("phonebook.csv", "a")
-    with open(filename) as file:
+    with open(argv[2]) as file:
         reader = csv.DictReader(file)
         print(f"{reader}")
 
