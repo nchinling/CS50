@@ -15,7 +15,7 @@ def main():
 
     av_letters = average_letters(total_letters, total_words)
     av_sentences = average_sentences(total_sentences, total_words)
-    index = int(cal_index(av_letters, av_sentences))
+    index = round(cal_index(av_letters, av_sentences))
     print(f"Grade {index}")
 
 
