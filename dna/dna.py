@@ -52,7 +52,8 @@ def main():
     i = 0
     while (i < len(database)):
         person = list(database[i].values())
-        print(person[0])
+        print(person)
+        #print(person[0])
         i += 1
 
     # obtain only the values
