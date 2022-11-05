@@ -38,7 +38,7 @@ def main():
     total = quarters + dimes + nickels + pennies
     print(f"Total coins:{total}")
 
-
+# function to get amount from user
 def get_amount():
     while True:
         try:
@@ -52,21 +52,25 @@ def get_amount():
             else:
                 return int(100*n)
 
-
+# function to get amount from user
 def calculate_quarters(amt):
 
     return int((amt) / 25)
 
+# function to get amount from user
 def calculate_dimes(amt):
 
     return int((amt) / 10)
 
+# function to get amount from user
 def calculate_nickel(amt):
 
     return int((amt) / 5)
 
-def calculate_penny(amt):
+# # function to return penny
+# def calculate_penny(amt):
 
-    return amt
+#     return amt
 
+# run the program
 main()
