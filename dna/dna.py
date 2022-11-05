@@ -9,6 +9,15 @@ def main():
         print("Usage: python dna.py databases/filename sequences/filename")
 
     # TODO: Read database file into a variable
+    database = []
+
+    # TODO: Read teams into memory from file
+    with open(sys.argv[2]) as file:
+        reader = csv.DictReader(file)
+        for team in reader:    # team is a loop variable to go through reader
+            team["rating"] = int(team["rating"])
+            database.append(team)
+        print(f"{teams}")
 
     # TODO: Read DNA sequence file into a variable
 
