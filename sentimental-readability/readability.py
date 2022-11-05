@@ -1,22 +1,38 @@
 # TODO
 import string
 
+
 def main():
     # get text from user
     text = get_text()
+
+    # count total number of letters
     total_letters = count_letters(text)
+
+    # count total number of words
     total_words = count_words(text)
+
+    # count total number of sentences
     total_sentences = count_sentences(text)
 
+    # print counts for debugging
     print(f"Text is: {text}")
     print(f"Total letters: {total_letters}")
     print(f"Total words: {total_words}")
     print(f"Total sentences: {total_sentences}")
 
+    # calculate average number of letters per hundred words
     av_letters = average_letters(total_letters, total_words)
+
+    # calculate average number of sentences per hundred words
     av_sentences = average_sentences(total_sentences, total_words)
+
+    # calculate index
     index = round(cal_index(av_letters, av_sentences))
+
+    # print with conditions
     printspecial(index)
+
 
 def printspecial(index):
     if index < 1:
@@ -27,6 +43,7 @@ def printspecial(index):
 
     else:
         print(f"Grade {index}")
+
 
 # function to get text from user
 def get_text():
@@ -39,11 +56,13 @@ def get_text():
         else:
             return s
 
+
 # function to calculate index
 def cal_index(L, S):
 
     index = 0.0588 * L - 0.296 * S - 15.8
     return index
+
 
 # function to count number of letters
 def count_letters(text):
@@ -71,6 +90,7 @@ def count_words(text):
 
     return number_of_words
 
+
 # function to count number of words
 def count_sentences(text):
 
@@ -82,20 +102,21 @@ def count_sentences(text):
 
     return number_of_sentences
 
+
 # Function to calculate average number of letters per hundred words
-def average_letters(letters,words):
+def average_letters(letters, words):
 
     average = (letters/words)*100
 
     return average
 
+
 # Function to calculate average number of sentences per hundred words
-def average_sentences(sentences,words):
+def average_sentences(sentences, words):
 
     average = (sentences/words)*100
 
     return average
-
 
 
 # run main function
