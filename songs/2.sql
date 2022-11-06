@@ -1,1 +1,1 @@
-SELECT name FROM songs WHERE 
+SELECT * FROM songs;
