@@ -1,1 +1,1 @@
-SELECT name FROM songs WHERE artist_id IN (SELECT id FROM artists WHERE name LIKE "%feat.%");
+SELECT name FROM songs WHERE name LIKE "%feat.%";
