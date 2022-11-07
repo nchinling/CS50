@@ -1,1 +1,1 @@
-SELECT name FROM artists WHERE 
+SELECT title FROM shows WHERE id IN (SELECT show_id FROM genres WHERE genre = "Comedy");
