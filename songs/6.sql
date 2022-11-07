@@ -1,1 +1,1 @@
-SELECT title FROM shows WHERE id IN (SELECT show_id FROM genres WHERE genre = "Comedy");
+SELECT name FROM songs WHERE artist_id IN (SELECT id FROM artists WHERE name = "Post Malone");
