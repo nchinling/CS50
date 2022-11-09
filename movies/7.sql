@@ -1,4 +1,7 @@
-SELECT movies.title, FROM movies WHERE movie_id IN (SELECT id FROM movies WHERE year = 2012);
+SELECT title FROM movies WHERE year = 2010, ratings.rating
+FROM movies
+JOIN ratings
+on movies.id = 
 
 SELECT tablename1.colunmname1, tablename2.colunmname2
 FROM tablename1
