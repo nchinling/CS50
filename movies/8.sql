@@ -3,7 +3,7 @@
 -- You may assume that there is only one movie in the database with the title Toy Story.
 
 SELECT name FROM people
-JOIN stars ON movies.id = ratings.movie_id
+JOIN stars ON stars.movie_id = movies.id
 JOIN movies on movies.id = stars.movie_id
 -- WHERE year = 2010
 -- ORDER BY rating DESC, title
