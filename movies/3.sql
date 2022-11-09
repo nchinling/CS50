@@ -1,1 +1,1 @@
-SELECT title FROM movies WHERE year >= 2018 ORDER BY ASC;
+SELECT title FROM movies ORDER BY ASC WHERE year >= 2018;
