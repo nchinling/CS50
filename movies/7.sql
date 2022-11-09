@@ -3,8 +3,8 @@
 -- SELECT ratings.rating;
 
 
-SELECT t1.title, t2.rating
-FROM movies t1, ratings t2
-WHERE t1.year = 2010
+SELECT movies.title, ratings.rating
+FROM movies, ratings
+WHERE movies.year = 2010;
 
 
