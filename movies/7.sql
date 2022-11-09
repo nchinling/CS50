@@ -2,11 +2,6 @@
 -- FROM Table_Employee
 -- WHERE Table_Employee.Column_DeptNo = table_Department.Column_DeptNo
 
-
--- SELECT movies.title, ratings.rating
--- FROM movies, ratings
--- WHERE movies.year = 2010;
-
 SELECT title, rating FROM movies, ratings
 WHERE movies.id = ratings.movie_id and movies.year = 2010
 ORDER BY rating DESC, title
