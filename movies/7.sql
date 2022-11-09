@@ -1,14 +1,6 @@
-SELECT title FROM movies WHERE year = 2010; rating FROM ratings;
-FROM movies
-JOIN ratings
-on movies.id = ratings.movie_id
-
-SELECT tablename1.colunmname1, tablename2.colunmname2
-FROM tablename1
-JOIN tablename2
-ON tablename1.colunmname1= tablename2.colunmname1
-[ORDER BY expression [ ASC | DESC ]];
-
+SELECT title FROM movies WHERE year = 2010
+JOIN ratings ON movies.id = ratings.movie_id
+WHERE 
 
 
 
