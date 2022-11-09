@@ -1,1 +1,1 @@
-SELECT COUNT(energy) FROM songs WHERE artist_id IN (SELECT id FROM artists WHERE name = "Drake");
+SELECT COUNT(movie_id) FROM ratings WHERE rating = 10;
