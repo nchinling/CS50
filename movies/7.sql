@@ -1,4 +1,4 @@
-SELECT title FROM movies WHERE year = 2010, ratings.rating
+SELECT title FROM movies WHERE year = 2010; rating FROM ratings;
 FROM movies
 JOIN ratings
 on movies.id = ratings.movie_id
