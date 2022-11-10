@@ -23,7 +23,7 @@ bank_accounts         passengers
 
 
 --4. To read the crime scene report
-SELECT description FROM crime_scene_reports
+SELECT description, id FROM crime_scene_reports
 WHERE street = "Humphrey Street" AND day = 28
 AND month = 7 AND year = 2021;
 
@@ -32,4 +32,4 @@ AND month = 7 AND year = 2021;
 --5.
 SELECT transcript FROM interviews
 WHERE year = 2021 AND
-month = 7 AND day = 28; 
+month = 7 AND day = 28;
