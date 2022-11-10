@@ -24,8 +24,7 @@ bank_accounts         passengers
 
 --4.
 SELECT description FROM crime_scene_reports
-WHERE street = "Humphrey Street"
-AND WHERE day = 28
+WHERE street = "Humphrey Street" AND WHERE day = 28;
 
 AND
 WHERE month = 7 AND
