@@ -22,10 +22,7 @@ bank_accounts         passengers
 .schema phone_calls
 
 
---4.
+--4. To read the crime scene report
 SELECT description FROM crime_scene_reports
-WHERE street = "Humphrey Street" AND WHERE day = 28;
-
-AND
-WHERE month = 7 AND
-WHERE year = 2021;
+WHERE street = "Humphrey Street" AND day = 28
+AND month = 7 AND year = 2021;
