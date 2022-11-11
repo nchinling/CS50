@@ -32,7 +32,4 @@ AND month = 7 AND year = 2021;
 --5.
 SELECT transcript FROM interviews
 WHERE year = 2021 AND
-month = 7 AND day = 28 AND id =295;
-
-SELECT transcript FROM interviews
-WHERE id = 295;
+month = 7 AND day = 28;
