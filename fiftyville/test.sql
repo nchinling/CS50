@@ -18,10 +18,11 @@ AND phone_calls.duration < 60 AND people.name IN (
         JOIN flights on flights.id = passengers.flight_id
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
-        flights.day = 29 AND
-        MIN(flights.hour)
+        flights.day = 29
         )
 );
+
+sqlite3 fiftyville.db
 
     -- SELECT name FROM people
     --     JOIN passengers on passengers.passport_number = people.passport_number
