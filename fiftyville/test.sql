@@ -19,7 +19,7 @@ AND phone_calls.duration < 60 AND people.name IN (
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
         flights.day = 29 AND
-        flights.hour < 7
+        MIN(flights.hour)
         )
 );
 
