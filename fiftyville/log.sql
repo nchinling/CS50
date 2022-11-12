@@ -286,8 +286,21 @@ WHERE passport_number = 5773159633;
 SELECT destination_airport_id FROM flights
 WHERE id = 36;
 
---find city destination
+-- +------------------------+
+-- | destination_airport_id |
+-- +------------------------+
+-- | 4                      |
+-- +------------------------+
 
+--find city destination
+SELECT city FROM airports
+where id = 4;
+
+-- +---------------+
+-- |     city      |
+-- +---------------+
+-- | New York City |
+-- +---------------+
 
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
