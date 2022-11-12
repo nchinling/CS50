@@ -271,6 +271,19 @@ WHERE name = "Bruce";
 -- | 5773159633      |
 -- +-----------------+
 
+
+--find Bruce's flight_id
+SELECT flight_id FROM passengers
+WHERE passport_number = 5773159633;
+
+-- +-----------+
+-- | flight_id |
+-- +-----------+
+-- | 36        |
+-- +-----------+
+
+
+
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
 
