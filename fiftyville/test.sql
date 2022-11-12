@@ -20,6 +20,16 @@ AND phone_calls.duration < 60 AND people.name IN (
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
         flights.day = 28 AND
-        flights.hour < 9 
+        flights.hour < 9 AND people.license_plate IN (
+
+            SELECT license_plate FROM people
+            JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
+            WHERE year = 2021 AND
+            month = 7 AND
+            day = 28 AND
+            hour = 10 AND
+            minute BETWEEN 15 AND 25 AND
+            activity = "exit"
+            )
         )
 );
