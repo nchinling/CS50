@@ -204,19 +204,15 @@ AND phone_calls.duration < 60 AND people.name IN (
         )
 );
 
---query from bakery_security_logs
+--query from bakery_security_logs to get license plate number
 SELECT license_plate FROM bakery_security_logs
 WHERE year = 2021 AND
 month = 7 AND
 day = 28 AND
-hour = 10
+hour = 10 AND
+minute BETWEEN 15 AND 25 AND
+activity = "exit";
 
-year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    hour INTEGER,
-    minute INTEGER,
-    activity TEXT,
 
 
 cat test.sql | sqlite3 fiftyville.db
