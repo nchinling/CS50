@@ -316,8 +316,23 @@ SELECT receiver FROM phone_calls
 WHERE caller = "(367) 555-5533" AND
 year = 2021 AND
 month = 7 AND
-day = 28;
+day = 28 AND
+duration < 60;
 
-cat test.sql | sqlite3 fiftyville.db
-sqlite3 fiftyville.db
+-- +----------------+
+-- |    receiver    |
+-- +----------------+
+-- | (375) 555-8161 |
+-- +----------------+
+
+--match phone number to name of accomplice
+SELECT name from people
+WHERE phone_number = "(375) 555-8161";
+
+-- +-------+
+-- | name  |
+-- +-------+
+-- | Robin |
+-- +-------+
+
 
