@@ -204,4 +204,6 @@ AND phone_calls.duration < 60 AND people.name IN (
         )
 );
 
+
+
 cat test.sql | sqlite3 fiftyville.db
