@@ -204,6 +204,19 @@ AND phone_calls.duration < 60 AND people.name IN (
         )
 );
 
+--query from bakery_security_logs
+SELECT license_plate FROM bakery_security_logs
+WHERE year = 2021 AND
+month = 7 AND
+day = 28 AND
+hour = 10
+
+year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    hour INTEGER,
+    minute INTEGER,
+    activity TEXT,
 
 
 cat test.sql | sqlite3 fiftyville.db
