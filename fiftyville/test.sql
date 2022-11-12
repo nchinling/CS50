@@ -20,16 +20,6 @@ AND phone_calls.duration < 60 AND people.name IN (
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
         flights.day = 28 AND
-        flights.hour < 9 AND
-        airports.full_name = "Fiftyville Regional Airport" AND people.license_plate IN (
-            SELECT license_plate FROM bakery_security_logs
-            JOIN people ON people.license_plate = bakery_security_logs
-            WHERE year = 2021 AND
-            month = 7 AND
-            day = 28 AND
-            hour = 10 AND
-            minute BETWEEN 15 AND 25 AND
-            activity = "exit"
-            )
+        flights.hour < 9 
         )
 );
