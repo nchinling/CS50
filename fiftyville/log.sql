@@ -255,6 +255,7 @@ AND phone_calls.duration < 60 AND people.name IN (
 | 0NTHK55       |
 +---------------+
 
+--run through one by one
 
 
 
@@ -262,3 +263,6 @@ AND phone_calls.duration < 60 AND people.name IN (
 
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
+
+select name from people
+where license_plate = "94KL13X";
