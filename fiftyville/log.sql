@@ -261,8 +261,15 @@ WHERE license_plate = "0NTHK55";
 
 --Bruce name appears out of the three earlier list. Therefore he is the culprit.
 
+--find passport number of Bruce
+SELECT passport_number FROM people
+WHERE name = "Bruce";
 
-
+-- +-----------------+
+-- | passport_number |
+-- +-----------------+
+-- | 5773159633      |
+-- +-----------------+
 
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
