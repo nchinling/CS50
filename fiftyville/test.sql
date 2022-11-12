@@ -19,18 +19,17 @@ AND phone_calls.duration < 60 AND people.name IN (
         JOIN airports on airports.id = flights.destination_airport_id
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
-        flights.day = 29 AND
-        flights.hour < 9 
+        flights.day = 28 AND
+        flights.hour < 9 AND
+        airports.full_name = "Fiftyville Regional Airport" AND people.license_plate IN (
+            SELECT license_plate FROM people
+            WHERE year = 2021 AND
+            month = 7 AND
+            day = 28 AND
+            hour = 10 AND
+            minute BETWEEN 15 AND 25 AND
+            activity = "exit"
+
+            )
         )
 );
-
-
-
-    -- SELECT name FROM people
-    --     JOIN passengers on passengers.passport_number = people.passport_number
-    --     JOIN flights on flights.id = passengers.flight_id
-    --     WHERE flights.year = 2021 AND
-    --     flights.month = 7 AND
-    --     flights.day = 29
-    --     ORDER BY name ASC;
-
