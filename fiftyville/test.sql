@@ -21,7 +21,7 @@ AND phone_calls.duration < 60 AND people.name IN (
         flights.month = 7 AND
         flights.day = 29 AND
         flights.hour < 9 AND
-        
+        airports.full_name 
         )
 );
 
