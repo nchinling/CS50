@@ -302,6 +302,19 @@ where id = 4;
 -- | New York City |
 -- +---------------+
 
+--find accomplice
+SELECT phone_number FROM people
+WHERE name = "Bruce";
+
+-- +----------------+
+-- |  phone_number  |
+-- +----------------+
+-- | (367) 555-5533 |
+-- +----------------+
+
+SELECT receiver FROM phone_calls
+WHERE caller = "(367) 555-5533";
+
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
 
