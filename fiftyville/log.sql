@@ -214,6 +214,8 @@ minute BETWEEN 15 AND 25 AND
 activity = "exit";
 
 
+--merge with license_pla
+
 
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
