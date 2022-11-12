@@ -246,7 +246,7 @@ AND phone_calls.duration < 60 AND people.name IN (
             day = 28 AND
             hour = 10 AND
             minute BETWEEN 15 AND 25 AND
-            activity = "exit";
+            activity = "exit"
 
             )
         )
