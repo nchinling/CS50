@@ -313,7 +313,10 @@ WHERE name = "Bruce";
 -- +----------------+
 
 SELECT receiver FROM phone_calls
-WHERE caller = "(367) 555-5533";
+WHERE caller = "(367) 555-5533" AND
+year = 2021 AND
+month = 7 AND
+day = 28;
 
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
