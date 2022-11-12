@@ -175,6 +175,6 @@ AND phone_calls.duration < 60 AND people.name IN (
 | Taylor |
 +--------+
 
-
+-- with airport table
 
 cat test.sql | sqlite3 fiftyville.db
