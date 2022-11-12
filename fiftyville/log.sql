@@ -199,7 +199,7 @@ AND phone_calls.duration < 60 AND people.name IN (
         flights.month = 7 AND
         flights.day = 28 AND
         flights.hour < 9 AND
-        airports.full_name = "Fiftyville Regional Airport"
+        airports.full_city = "Fiftyville Regional Airport"
         )
 );
 
