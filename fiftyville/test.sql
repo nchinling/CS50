@@ -1,3 +1,4 @@
+
 SELECT name FROM people
 JOIN phone_calls ON phone_calls.caller = people.phone_number
 JOIN bank_accounts ON bank_accounts.person_id = people.id
@@ -16,20 +17,20 @@ AND phone_calls.duration < 60 AND people.name IN (
         SELECT name FROM people
         JOIN passengers on passengers.passport_number = people.passport_number
         JOIN flights on flights.id = passengers.flight_id
-        JOIN airports on airports.id = flights.destination_airport_id
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
         flights.day = 28 AND
-        flights.hour < 9 AND people.license_plate IN (
+        flights.hour < 9 AND people.name IN (
 
-            SELECT license_plate FROM people
+            SELECT name FROM people
             JOIN bakery_security_logs ON bakery_security_logs.license_plate = people.license_plate
-            WHERE year = 2021 AND
-            month = 7 AND
-            day = 28 AND
-            hour = 10 AND
-            minute BETWEEN 15 AND 25 AND
-            activity = "exit"
+            WHERE bakery_security_logs.year = 2021 AND
+            bakery_security_logs.month = 7 AND
+            bakery_security_logs.day = 28 AND
+            bakery_security_logs.hour = 10 AND
+            bakery_security_logs.minute BETWEEN 15 AND 30 AND
+            bakery_security_logs.activity = "exit"
             )
+
         )
 );
