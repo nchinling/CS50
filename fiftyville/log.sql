@@ -242,21 +242,24 @@ AND phone_calls.duration < 60 AND people.name IN (
 );
 
 
-+---------------+
-| license_plate |
-+---------------+
-| 5P2BI95       |
-| 94KL13X       |
-| 6P58WS2       |
-| 4328GD8       |
-| G412CB7       |
-| L93JTIZ       |
-| 322W7JE       |
-| 0NTHK55       |
-+---------------+
+-- +---------------+
+-- | license_plate |
+-- +---------------+
+-- | 5P2BI95       |
+-- | 94KL13X       |
+-- | 6P58WS2       |
+-- | 4328GD8       |
+-- | G412CB7       |
+-- | L93JTIZ       |
+-- | 322W7JE       |
+-- | 0NTHK55       |
+-- +---------------+
 
---run through one by one
+--run through each license_plate with people file to identify person
+SELECT name FROM people
+WHERE license_plate = "0NTHK55";
 
+--Bruce name appears out of the three earlier list. Therefore he is the culprit.
 
 
 
@@ -264,5 +267,3 @@ AND phone_calls.duration < 60 AND people.name IN (
 cat test.sql | sqlite3 fiftyville.db
 sqlite3 fiftyville.db
 
-select name from people
-where license_plate = "94KL13X";

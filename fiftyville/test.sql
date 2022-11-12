@@ -18,7 +18,6 @@ AND phone_calls.duration < 60 AND people.name IN (
         JOIN flights on flights.id = passengers.flight_id
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
-        flights.day = 28 AND
-        flights.hour < 9
+        flights.day = 28
         )
 );
