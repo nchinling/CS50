@@ -16,10 +16,12 @@ AND phone_calls.duration < 60 AND people.name IN (
         SELECT name FROM people
         JOIN passengers on passengers.passport_number = people.passport_number
         JOIN flights on flights.id = passengers.flight_id
+        JOIN airports on airports.id = flights.destination_airport_id
         WHERE flights.year = 2021 AND
         flights.month = 7 AND
         flights.day = 29 AND
-        flights.hour < 9
+        flights.hour < 9 AND
+        
         )
 );
 
