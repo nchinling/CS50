@@ -200,7 +200,12 @@ AND phone_calls.duration < 60 AND people.name IN (
         flights.month = 7 AND
         flights.day = 28 AND
         flights.hour < 9 AND
-        airports.full_name = "Fiftyville Regional Airport"
+        airports.full_name = "Fiftyville Regional Airport" AND people.license_plate IN (
+
+
+
+        )
+
         )
 );
 
@@ -214,7 +219,20 @@ minute BETWEEN 15 AND 25 AND
 activity = "exit";
 
 
---merge with license_pla
+--merge main table with person's license_plate
+
+
+
+
+
+
+
+AND people.license_plate IN (
+
+
+
+        )
+
 
 
 cat test.sql | sqlite3 fiftyville.db
