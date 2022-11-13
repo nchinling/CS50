@@ -12,7 +12,7 @@
                     let correct = document.querySelector('.correct');
                     correct.addEventListener('click', function() {
                         correct.style.backgroundColor = 'green';
-                        document.querySelector('#feedback1').innerHTML = 'Correct!';
+                        document.querySelector('#feedbackmcq').innerHTML = 'Correct!';
                     });
 
 
@@ -21,7 +21,7 @@
                     for (let i = 0 ; i < incorrects.length; i++){
                         incorrects[i].addEventListener('click', function() {
                             incorrects[i].style.backgroundColor = 'red';
-                            document.querySelector('#feedback1').innerHTML = "Incorrect";
+                            document.querySelector('#feedbackmcq').innerHTML = "Incorrect";
                             });
                         }
 
@@ -29,10 +29,10 @@
                     let input = document.querySelector('input');
                     if (input.value === 'New Delhi'){
                         input.style.backgroundColor = 'green';
-                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                        document.querySelector('#feedbackfrq').innerHTML = 'Correct!';
                     } else {
                         input.style.backgroundColor = 'red';
-                        document.querySelector('#feedback2').innerHTML = 'Incorrect!'   ;
+                        document.querySelector('#feedbackfrq').innerHTML = 'Incorrect!'   ;
                     }
                 });
             });
@@ -56,7 +56,7 @@
                     <button class = "incorrect">Dior</button>
                     <button class = "correct">Classic</button>
 
-                    <p id = "feedback1"></p>
+                    <p id = "feedbackmcq"></p>
 
             </div>
 
@@ -67,7 +67,7 @@
                 <h3>What is the capital of India?</h3>
                 <input type ="text"></input>
                 <button id = "check">Check Answer</button>
-                <p id = "feedback2"></p>
+                <p id = "feedbackfrq"></p>
 
 
             </div>
