@@ -6,10 +6,19 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
+                document.addEventListener('DOMContentLoaded', function() {
+
+                //when correct answer is clicked, change colour to green. 
+                document.querySelector('form').addEventListener('submit', function(e) {
+                alert('hello, ' + document.querySelector('#answer').value);
+                e.preventDefault();
+                 });
+            });
 
 
         </script>
+
+
     </head>
     <body>
         <div class="header">
