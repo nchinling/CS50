@@ -27,7 +27,7 @@
 
                 document.querySelector('#check').addEventListener('click', function(){
                     let input = document.querySelector("input");
-                    if (input.value == 'London'){
+                    if (input.value == 'New Delhi'){
                         input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = "Correct!";
                     } else {
@@ -61,39 +61,12 @@
 
             </div>
 
-            <script>
-
-                document.querySelector('#red').addEventListener('click', function() {
-                    red.style.backgroundColor = 'red';
-                    reply.innerHTML = "Incorrect";
-                });
-                document.querySelector('#red2').addEventListener('click', function() {
-                    red2.style.backgroundColor = 'red';
-                    reply.innerHTML = "Incorrect";
-                });
-                document.querySelector('#green').addEventListener('click', function() {
-                    green.style.backgroundColor = 'green';
-                    reply.innerHTML = "Correct!";
-                });
-
-            </script>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('form').addEventListener('submit', function(e) {
-                alert('hello, ' + document.querySelector('#answer').value);
-                e.preventDefault();
-    });
-});
-
-
-            </script>
 
             <div class="section">
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
-                <h3>Who is the Prime Minister of United Kingdom?</h3>
+                <h3>What is the capital of India?</h3>
                 <input type ="text"></input>
                 <button id = "check">Check Answer</button>
                 <p id = "feedback2></p>
