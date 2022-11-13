@@ -26,13 +26,13 @@
                         }
 
                     document.querySelector('#check').addEventListener('click', function(){
-                    let input = document.querySelector("input");
-                    if (input.value == 'New Delhi'){
+                    let input = document.querySelector('input');
+                    if (input.value === 'New Delhi'){
                         input.style.backgroundColor = 'green';
-                        document.querySelector('#feedback2').innerHTML = "Correct!";
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
                     } else {
                         input.style.backgroundColor = 'red';
-                        document.querySelector('#feedback2').innerHTML = "Incorrect!";
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!'   ;
                     }
                 });
             });
