@@ -45,6 +45,17 @@
 
             </script>
 
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('submit', function(e) {
+                alert('hello, ' + document.querySelector('#answer').value);
+                e.preventDefault();
+    });
+});
+
+
+            </script>
+
             <div class="section">
                 <h2>Part 2: Free Response</h2>
                 <hr>
