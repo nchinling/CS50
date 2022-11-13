@@ -23,7 +23,7 @@
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the most famous Chanel handbag?</h3>
                 <p><button id = "red">Birkin</button></p>
-                <p><button id = "red">Dior</button></p>
+                <p><button id = "red2">Dior</button></p>
                 <p><button id = "green">Classic</button></p>
             </div>
 
@@ -31,6 +31,9 @@
 
                 let body = document.querySelector('body');
                 document.querySelector('#red').addEventListener('click', function() {
+                    body.style.backgroundColor = 'red';
+                });
+                document.querySelector('#red2').addEventListener('click', function() {
                     body.style.backgroundColor = 'red';
                 });
                 document.querySelector('#green').addEventListener('click', function() {
