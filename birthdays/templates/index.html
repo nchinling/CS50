@@ -23,14 +23,6 @@
                     <input type="submit" value="Add Birthday">
                 </form>
 
-                <br>
-
-                <!-- to delete -->
-                <form action="/" method="get">
-                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-                    <input type="submit" value="Delete">
-                </form>
-
             </div>
 
             <div class="section">
@@ -52,7 +44,7 @@
                                 <td>
                                     {{ birthday.month}}/{{ birthday.day}}
                                 </td>
-                                
+
                             </tr>
                         {% endfor %}
                     </tbody>
