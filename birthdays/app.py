@@ -47,12 +47,3 @@ def index():
 
         #render birthdays table
         return render_template("index.html", birthdays=birthdays)
-
-@app.route("/", methods=["POST"])
-def delete():
-
-    # Forget registrant
-    id = request.form.get("name")
-    if id:
-        db.execute("DELETE FROM registrants WHERE id = ?", name)
-    return redirect("/")
