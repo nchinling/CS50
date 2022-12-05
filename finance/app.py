@@ -117,7 +117,7 @@ def quote():
             return apology("Please enter a valid symbol")
 
         item = lookup(symbol)
-        if not stock:
+        if not item:
             return apology("Please enter a valid symbol")
         else:
             return render_template("quoted.html", item=item)
