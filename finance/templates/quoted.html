@@ -6,6 +6,6 @@
 
 {% block main %}
 
-<p> The cost of {{item.name}} is {{item.price}}. </p>
+<p> The cost of {{item.name}} is {{usd_f(item.price)}}. </p>
 
 {% endblock %}
