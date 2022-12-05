@@ -138,7 +138,7 @@ def register():
             db.execute("INTO INTO users (username, hash) VALUES(?,?)", username, hashvalue)
             return redirect('/')
         except:
-            return apology('Username has been used')
+            return apology('Username has been registered')
 
 
     else:
