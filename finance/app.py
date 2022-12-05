@@ -126,7 +126,6 @@ def quote():
 
     else:
         return render_template("quote.html")
-    # return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
