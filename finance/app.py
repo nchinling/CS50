@@ -118,7 +118,7 @@ def quote():
             return apology("Please enter a valid symbol")
 
         item = lookup(symbol)
-        
+
         if not item:
             return apology("Invalid")
 
