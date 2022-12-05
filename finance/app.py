@@ -119,8 +119,8 @@ def quote():
         item = lookup(symbol)
         if not item:
             return apology("Invalid")
-        else:
-            return render_template("quoted.html", item=item, usd_f=usd)
+
+        return render_template("quoted.html", item=item, usd_f=usd)
 
     else:
         return render_template("quote.html")
