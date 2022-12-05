@@ -50,6 +50,10 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+    if request.method == "POST":
+        pass
+    else:
+        return render_template("buy.html")
     user_id = session["user_id"]
     return apology("TODO")
 
