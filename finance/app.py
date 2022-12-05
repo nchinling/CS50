@@ -132,6 +132,8 @@ def register():
         if password != confirmation:
             return apology('Passwords do not match')
 
+        hashvalue =  generate_password_hash(password)
+        db.execute("INTO INTO users (username, hash) VALUES(?,?)", username, hashvalue)
         return redirect('/')
 
 
