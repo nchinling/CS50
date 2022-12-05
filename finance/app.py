@@ -135,7 +135,7 @@ def register():
         hashvalue =  generate_password_hash(password)
 
         try:
-            db.execute("INTO INTO users (username, hash) VALUES(?,?)", username, hashvalue)
+            db.execute("INSERT INTO users (username, hash) VALUES(?,?)", username, hashvalue)
             return redirect('/')
         except:
             return apology('Username has been registered')
