@@ -125,16 +125,20 @@ def register():
 
         if not username:
             return apology('Please enter username.')
-         if not password:
+        if not password:
             return apology('Please enter password.')
-         if not confirmation:
+        if not confirmation:
             return apology('Please confirm password')
         if password != confirmation:
             return apology('Passwords do not match')
 
         hashvalue =  generate_password_hash(password)
-        db.execute("INTO INTO users (username, hash) VALUES(?,?)", username, hashvalue)
-        return redirect('/')
+
+        try:
+            db.execute("INTO INTO users (username, hash) VALUES(?,?)", username, hashvalue)
+            return redirect('/')
+        except:
+            return apology('Username has been used')
 
 
     else:
