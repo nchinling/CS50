@@ -50,6 +50,7 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+    user_id = session["user_id"]
     return apology("TODO")
 
 
