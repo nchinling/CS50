@@ -54,8 +54,6 @@ def buy():
         pass
     else:
         return render_template("buy.html")
-    user_id = session["user_id"]
-    return apology("TODO")
 
 
 @app.route("/history")
