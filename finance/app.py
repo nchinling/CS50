@@ -46,6 +46,7 @@ def index():
     uid = session["user_id"]
 
     stocks = db.execute("SELECT symbol, name, price, shares FROM transactions WEHRE user_id = ? GROUP BY symbol", uid)
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)
     return apology("TODO")
 
 
