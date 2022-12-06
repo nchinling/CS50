@@ -85,7 +85,7 @@ def buy():
             user_id, stock_name, shares, stock_price, 'buy', symbol)
 
         return redirect('/')
-        
+
     else:
         return render_template("buy.html")
 
