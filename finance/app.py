@@ -230,9 +230,9 @@ def sell():
         db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?,?,?,?,?,?)",
         uid, stock_name, -shares, "sell", symbol)
         return redirect("/")
-        
+
     else:
 
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
         return render_template("sell.html", symbols=symbols)
-    return apology("TODO")
+    
