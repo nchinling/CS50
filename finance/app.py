@@ -69,7 +69,6 @@ def buy():
 
 
         user_id = session["user_id"]
-        print ("I am a programmer")
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         print(f'\n\n{cash}\n\n')
 
