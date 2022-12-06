@@ -68,7 +68,7 @@ def buy():
             return apology("Share quantity must be positive")
 
 
-        uidid = session["user_id"]
+        uid = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
         print(f'\n\n{cash}\n\n')
 
