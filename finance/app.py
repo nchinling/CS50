@@ -212,5 +212,6 @@ def sell():
     if request.method == "POST":
         pass
     else:
-        
+        symbols = db.execute("SELECT symbol FROM transaction WHERE user_id =? GROUP BY symbol", user_id)
+        return render_template("sell.html", symbols=symbols)
     return apology("TODO")
