@@ -67,8 +67,13 @@ def buy():
             return apology("Share quantity must be positive")
 
         user_id = session["user_id"]
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         print(f'\n\n{cash}\n\n')
+
+        stock_name = stock["name"]
+        stock_price = stock["price"]
+        total_price = stock_price * shares
+        
 
         return redirect('/')
     else:
