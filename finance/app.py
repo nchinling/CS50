@@ -52,7 +52,17 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol").upper()
-        
+        stock = lookup(symbol)
+
+        if not symbol:
+            return apology ("Please enter a valid symbol")
+        elif not item:
+            return apology("Invalid symbol")
+        try:
+            shares = int(request.form.get("shares"))
+        except:
+            return apology("Shares quantity must be an integer")
+            
     else:
         return render_template("buy.html")
 
