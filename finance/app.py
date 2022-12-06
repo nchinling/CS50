@@ -208,14 +208,16 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    uid = session["user_id"]
+    # uid = session["user_id"]
     """Sell shares of stock"""
     if request.method == "POST":
+        uid = session["user_id"]
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
 
         if shares <= 0:
             return apology("Share quantity must be postive")
+
         stock_price = lookup(symbol)["price"]
         stock_name = lookup(symbol)["name"]
         sold_amount = shares * stock_price
@@ -232,7 +234,7 @@ def sell():
         return redirect("/")
 
     else:
-
+        uid = session["user_id"]
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
         return render_template("sell.html", symbols=symbols)
-    
+
