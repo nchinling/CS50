@@ -63,11 +63,14 @@ def buy():
         except:
             return apology("Shares quantity must be an integer")
 
-        if shares <= 0;
+        if shares <= 0:
             return apology("Share quantity must be positive")
 
         user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        print(f'\n\n{cash}\n\n')
+
+        return redirect('/')
     else:
         return render_template("buy.html")
 
