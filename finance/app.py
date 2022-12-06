@@ -104,7 +104,7 @@ def history():
     uid=session["user_id"]
     hist = db.execute("SELECT type, symbol, price, shares, time FROM transactions WHERE user_id = ?", uid)
 
-    return render_template("history.html", hist=his, usd=usd)
+    return render_template("history.html", hist=hist, usd=usd)
 
 
 @app.route("/login", methods=["GET", "POST"])
