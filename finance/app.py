@@ -62,7 +62,12 @@ def buy():
             shares = int(request.form.get("shares"))
         except:
             return apology("Shares quantity must be an integer")
-            
+
+        if shares <= 0;
+            return apology("Share quantity must be positive")
+
+        user_id = session["user_id"]
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     else:
         return render_template("buy.html")
 
