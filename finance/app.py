@@ -216,10 +216,21 @@ def sell():
 
         if shares <= 0:
             return apology("Share quantity must be postive")
-
         stock_price = lookup(symbol)["price"]
         stock_name = lookup(symbol)["name"]
+        sold_amount = shares * stock_price
 
+        available_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
+
+        if available_shares < shares:
+            return apology("You don't own enough shares")
+
+        current_cash  = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + sold_amount, uid)
+        db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?,?,?,?,?,?)",
+        uid, stock_name, -shares, "sell", symbol)
+        return redirect("/")
+        
     else:
 
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
