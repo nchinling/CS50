@@ -45,7 +45,8 @@ def index():
     """Show portfolio of stocks"""
     uid = session["user_id"]
 
-    stocks = db.execute("SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
+    stocks = db.execute(
+        "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
     cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
     total = cash
     for stock in stocks:
