@@ -43,6 +43,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    uid = session["user_id"]
+
+    stocks = db.execute("SELECT symbol, name, price, shares FROM transactions WEHRE user_id = ?", uid)
     return apology("TODO")
 
 
