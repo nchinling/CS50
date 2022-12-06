@@ -211,7 +211,6 @@ def sell():
     uid = session["user_id"]
     """Sell shares of stock"""
     if request.method == "POST":
-
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
 
