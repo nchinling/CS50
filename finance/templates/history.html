@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Type</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Time</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        {% for transaction in hist %}
+        <tr>
+            <td>{{ hist["symbol"].upper()}}</td>
+            <td>{{ hist["type"]}}</td>
+            <td>{{ hist["shares"]}}</td>
+            <td>{{ usd(hist["price"]) }}</td>
+            <td>{{ hist["time"]}}</td>
+
+        </tr>
+        {% endfor %}
+
+        <tr>
+            <td>CASH</td>
+            <td colspan="3"></td>
+            <td>{{ cash }}</td>
+        </tr>
+    </tbody>
+        <td colspan="4"></td>
+        <td>{{total}}</td>
+    <tfoot>
+
+    </tfoot>
+
+
+</table>
+{% endblock %}
