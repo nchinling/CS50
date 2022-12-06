@@ -213,6 +213,6 @@ def sell():
         pass
     else:
         uid = session["user_id"]
-        symbols = db.execute("SELECT symbol FROM transaction WHERE user_id =? GROUP BY symbol", uid)
+        symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
         return render_template("sell.html", symbols=symbols)
     return apology("TODO")
