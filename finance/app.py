@@ -38,6 +38,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+
 @app.route("/")
 @login_required
 def index():
@@ -52,7 +53,6 @@ def index():
         total += stock["price"]*stock["totalShares"]
 
     return render_template("index.html", stocks=stocks, cash=usd(cash), total=usd(total), usd=usd)
-
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -89,7 +89,7 @@ def buy():
         else:
             db.execute("UPDATE users SET CASH = ? WHERE id = ?", cash - total_price, uid)
             db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)",
-                uid, stock_name, shares, stock_price, 'buy', symbol)
+                        uid, stock_name, shares, stock_price, 'buy', symbol)
 
         return redirect('/')
 
@@ -193,14 +193,13 @@ def register():
         if password != confirmation:
             return apology('Passwords do not match')
 
-        hashvalue =  generate_password_hash(password)
+        hashvalue = generate_password_hash(password)
 
         try:
             db.execute("INSERT INTO users (username, hash) VALUES(?,?)", username, hashvalue)
             return redirect('/')
         except:
             return apology('Username has been registered')
-
 
     else:
         return render_template("register.html")
@@ -223,15 +222,16 @@ def sell():
         stock_name = lookup(symbol)["name"]
         sold_amount = shares * stock_price
 
-        available_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
+        available_shares = db.execute
+            ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
 
         if available_shares < shares:
             return apology("You don't own enough shares")
 
-        current_cash  = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
         db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + sold_amount, uid)
         db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?,?,?,?,?,?)",
-        uid, stock_name, -shares, stock_price, "sell", symbol)
+                    uid, stock_name, -shares, stock_price, "sell", symbol)
         return redirect("/")
 
     else:
