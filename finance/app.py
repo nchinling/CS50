@@ -66,9 +66,10 @@ def buy():
 
         if shares <= 0:
             return apology("Share quantity must be positive")
-            print ("I am a programmer")
+
 
         user_id = session["user_id"]
+        print ("I am a programmer")
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         print(f'\n\n{cash}\n\n')
 
@@ -79,7 +80,6 @@ def buy():
         if cash < total_price:
             return apology ("You do not have enough cash")
         else:
-
             db.execute("UPDATE users SET CASH = ? WHERE id = ?", cash - total_price, user_id)
             db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)",
             user_id, stock_name, shares, stock_price, 'buy', symbol)
