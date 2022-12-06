@@ -56,7 +56,7 @@ def buy():
 
         if not symbol:
             return apology ("Please enter a valid symbol")
-        elif not symbol:
+        elif not stock:
             return apology("Invalid symbol")
         try:
             shares = int(request.form.get("shares"))
@@ -77,7 +77,7 @@ def buy():
         if cash < total_price:
             return apology ("You do not have enough cash")
         else:
-            
+
             db.execute("UPDATE users SET CASH = ? WHERE id = ?", cash - total_price, user_id)
             db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)",
             user_id, stock_name, shares, stock_price, 'buy', symbol)
