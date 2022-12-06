@@ -18,13 +18,13 @@
     </thead>
 
     <tbody>
-        {% for hist in hist %}
+        {% for transact in histo %}
         <tr>
-            <td>{{ hist["symbol"].upper()}}</td>
-            <td>{{ hist["type"]}}</td>
-            <td>{{ hist["shares"]}}</td>
-            <td>{{ usd(hist["price"]) }}</td>
-            <td>{{ hist["time"]}}</td>
+            <td>{{ transact["symbol"].upper()}}</td>
+            <td>{{ transact["type"]}}</td>
+            <td>{{ transact["shares"]}}</td>
+            <td>{{ usd(transact["price"]) }}</td>
+            <td>{{ transact["time"]}}</td>
 
         </tr>
         {% endfor %}
