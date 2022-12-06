@@ -10,9 +10,10 @@
             <select name=""symbol">
                 {% for symbol in symbols %}
                 <option>{{ symbol["symbol"] }}</option>
+                {% endfor %}
             </select>
         </div>
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number">
         </div>
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
