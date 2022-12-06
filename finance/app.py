@@ -58,10 +58,11 @@ def buy():
             return apology ("Please enter a valid symbol")
         elif not stock:
             return apology("Invalid symbol")
+
         try:
             shares = int(request.form.get("shares"))
         except:
-            return apology("Shares quantity must be an integer")
+            return apology("Share quantity must be an integer")
 
         if shares <= 0:
             return apology("Share quantity must be positive")
