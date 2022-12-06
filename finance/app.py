@@ -84,7 +84,7 @@ def buy():
             db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)",
             user_id, stock_name, shares, stock_price, 'buy', symbol)
 
-        return redirect('/')
+        return redirect('/quote')
     else:
         return render_template("buy.html")
 
