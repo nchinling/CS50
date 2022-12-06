@@ -56,7 +56,7 @@ def buy():
 
         if not symbol:
             return apology ("Please enter a valid symbol")
-        elif not item:
+        elif not symbol:
             return apology("Invalid symbol")
         try:
             shares = int(request.form.get("shares"))
