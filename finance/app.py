@@ -45,7 +45,7 @@ def index():
     """Show portfolio of stocks"""
     uid = session["user_id"]
 
-    stocks = db.execute("SELECT symbol, name, price, shares FROM transactions WEHRE user_id = ?", uid)
+    stocks = db.execute("SELECT symbol, name, price, shares FROM transactions WEHRE user_id = ? GROUP BY symbol", uid)
     return apology("TODO")
 
 
