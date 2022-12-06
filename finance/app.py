@@ -38,7 +38,6 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-
 @app.route("/")
 @login_required
 def index():
@@ -65,7 +64,7 @@ def buy():
         stock = lookup(symbol)
 
         if not symbol:
-            return apology ("Please enter a valid symbol")
+            return apology("Please enter a valid symbol")
         elif not stock:
             return apology("Invalid symbol")
 
@@ -77,7 +76,6 @@ def buy():
         if shares <= 0:
             return apology("Share quantity must be positive")
 
-
         uid = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
         print(f'\n\n{cash}\n\n')
@@ -87,10 +85,11 @@ def buy():
         total_price = stock_price * shares
 
         if cash < total_price:
-            return apology ("You do not have enough cash")
+            return apology("You do not have enough cash")
         else:
             db.execute("UPDATE users SET CASH = ? WHERE id = ?", cash - total_price, uid)
-            db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)", uid, stock_name, shares, stock_price, 'buy', symbol)
+            db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)",
+                uid, stock_name, shares, stock_price, 'buy', symbol)
 
         return redirect('/')
 
@@ -102,7 +101,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    uid=session["user_id"]
+    uid = session["user_id"]
     hist = db.execute("SELECT type, symbol, price, shares, time FROM transactions WHERE user_id = ?", uid)
 
     return render_template("history.html", histo=hist, usd=usd)
