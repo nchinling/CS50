@@ -208,7 +208,7 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    # uid = session["user_id"]
+   
     """Sell shares of stock"""
     if request.method == "POST":
         uid = session["user_id"]
