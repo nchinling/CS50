@@ -127,6 +127,8 @@ def quote():
         if not stock:
             return apology("Invalid")
 
+        # return render_template("quoted.html", item=stock, usd_f=usd)
+
         return render_template("quoted.html", item=stock, usd_f=usd)
 
     else:
