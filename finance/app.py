@@ -214,6 +214,12 @@ def sell():
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
 
+        if shares <= 0:
+            return apology("Share quantity must be postive")
+
+        stock_price = lookup(symbol)["price"]
+        stock_name = lookup(symbol)["name"]
+
     else:
 
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
