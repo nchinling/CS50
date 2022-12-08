@@ -248,25 +248,25 @@ def sell():
 def profile():
     """Show portfolio of stocks"""
     uid = session["user_id"]
-    
-    if request.method == "POST":
-        return redirect("/top-up")
-
-    username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
-
-    userdata = db.execute(
-        "SELECT username, cash FROM users WHERE id = ?", uid)
-
-    stocks = db.execute(
-        "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
-
-    total = cash
-    for stock in stocks:
-        total += stock["price"]*stock["totalShares"]
-
-    return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
 
     if request.method == "POST":
         return redirect("/top-up")
+
+    else:
+        username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
+
+        userdata = db.execute(
+            "SELECT username, cash FROM users WHERE id = ?", uid)
+
+        stocks = db.execute(
+            "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+
+        total = cash
+        for stock in stocks:
+            total += stock["price"]*stock["totalShares"]
+
+        return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
+
+
 
