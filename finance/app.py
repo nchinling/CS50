@@ -250,10 +250,10 @@ def profile():
     uid = session["user_id"]
 
     if request.method == "POST":
-        symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        topup = request.form.get("topup")
+
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + sold_amount, uid)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + topup, uid)
 
 
     else:
