@@ -89,7 +89,7 @@ def buy():
         else:
             db.execute("UPDATE users SET CASH = ? WHERE id = ?", cash - total_price, uid)
             db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)",
-                        uid, stock_name, shares, stock_price, 'buy', symbol)
+                       uid, stock_name, shares, stock_price, 'buy', symbol)
 
         return redirect('/')
 
@@ -223,7 +223,7 @@ def sell():
         sold_amount = shares * stock_price
 
         available_shares = db.execute
-            ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
+        ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
 
         if available_shares < shares:
             return apology("You don't own enough shares")
@@ -231,7 +231,7 @@ def sell():
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
         db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + sold_amount, uid)
         db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?,?,?,?,?,?)",
-                    uid, stock_name, -shares, stock_price, "sell", symbol)
+                   uid, stock_name, -shares, stock_price, "sell", symbol)
         return redirect("/")
 
     else:
