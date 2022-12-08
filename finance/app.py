@@ -240,36 +240,19 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
 # Additional feature: profile page where user is able to top up cash and change password.
-# @app.route("/profile", methods=["GET", "POST"])
+# @app.route("/profile")
 # @login_required
-# def sell():
+# def index():
+#     """Show portfolio of stocks"""
 #     uid = session["user_id"]
-#     """Sell shares of stock"""
-#     if request.method == "POST":
-#         symbol = request.form.get("symbol")
-#         shares = int(request.form.get("shares"))
 
-#         if shares <= 0:
-#             return apology("Share quantity must be postive")
+#     stocks = db.execute(
+#         "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
+#     cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+#     total = cash
+#     for stock in stocks:
+#         total += stock["price"]*stock["totalShares"]
 
-#         stock_price = lookup(symbol)["price"]
-#         stock_name = lookup(symbol)["name"]
-#         sold_amount = shares * stock_price
+#     return render_template("index.html", stocks=stocks, cash=usd(cash), total=usd(total), usd=usd)
 
-#         available_shares = db.execute
-#         ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
-
-#         if available_shares < shares:
-#             return apology("You don't own enough shares")
-
-#         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
-#         db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + sold_amount, uid)
-#         db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES (?,?,?,?,?,?)",
-#                    uid, stock_name, -shares, stock_price, "sell", symbol)
-#         return redirect("/")
-
-#     else:
-
-#         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
-#         return render_template("sell.html", symbols=symbols)
 
