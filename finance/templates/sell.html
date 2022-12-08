@@ -8,7 +8,10 @@
     <form action="/sell" method="post">
         <div class="mb-3">
             <select name="symbol">
-                <!-- <option>SELECT</option> -->
+
+                <!-- 'SELECT' label -->
+                <option>SELECT</option>
+                
                 {% for symbol in symbols %}
                 <option>{{ symbol["symbol"] }}</option>
                 {% endfor %}
