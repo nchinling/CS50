@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block main %}
+
+<h3>{{ username }} </h3>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -18,13 +20,13 @@
     </thead>
 
     <tbody>
-        {% for stock2 in stocks2 %}
+        {% for stock in stocks2 %}
         <tr>
-            <td>{{ stock2["symbol"]}}</td>
-            <td>{{ stock2["name"]}}</td>
-            <td>{{ stock2["totalShares"]}}</td>
-            <td>{{ usd(stock2["price"]) }}</td>
-            <td>{{ usd(stock2["totalShares"] * stock2["price"]) }}</td>
+            <td>{{ stock["symbol"]}}</td>
+            <td>{{ stock["name"]}}</td>
+            <td>{{ stock["totalShares"]}}</td>
+            <td>{{ usd(stock["price"]) }}</td>
+            <td>{{ usd(stock["totalShares"] * stock["price"]) }}</td>
         </tr>
         {% endfor %}
 
