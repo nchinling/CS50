@@ -242,7 +242,7 @@ def sell():
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
         return render_template("sell.html", symbols=symbols)
 
-# Additional feature: profile page where user is able to top up cash and change password.
+# Additional feature: profile page where user is able to top up cash
 @app.route("/profile", methods=["GET", "POST"])
 @login_required
 def profile():
@@ -250,7 +250,9 @@ def profile():
     uid = session["user_id"]
 
     if request.method == "POST":
-        return redirect("/top-up")
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+
 
     else:
         username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
