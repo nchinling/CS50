@@ -248,8 +248,8 @@ def profile():
 
     username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
 
-    # userdata = db.execute(
-    #     "SELECT name, cash FROM users WHERE id = ?", uid)
+    userdata = db.execute(
+        "SELECT username, cash FROM users WHERE id = ?", uid)
 
     stocks = db.execute(
         "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
