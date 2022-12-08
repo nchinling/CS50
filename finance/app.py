@@ -240,25 +240,25 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
 # Additional feature: profile page where user is able to top up cash and change password.
-@app.route("/profile", methods=["GET", "POST"])
-@login_required
-def profile():
-    """Show portfolio of stocks"""
-    uid = session["user_id"]
+# @app.route("/profile", methods=["GET", "POST"])
+# @login_required
+# def profile():
+#     """Show portfolio of stocks"""
+#     uid = session["user_id"]
 
-    username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
+#     username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
 
-    userdata = db.execute(
-        "SELECT username, cash FROM users WHERE id = ?", uid)
+#     userdata = db.execute(
+#         "SELECT username, cash FROM users WHERE id = ?", uid)
 
-    stocks = db.execute(
-        "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+#     stocks = db.execute(
+#         "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
+#     cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
 
-    total = cash
-    for stock in stocks:
-        total += stock["price"]*stock["totalShares"]
+#     total = cash
+#     for stock in stocks:
+#         total += stock["price"]*stock["totalShares"]
 
-    return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
+#     return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
 
 
