@@ -252,8 +252,8 @@ def profile():
     if request.method == "POST":
         topup = request.form.get("topup")
 
-        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + topup, uid)
+        available_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", available_cash + topup, uid)
         return redirect("/")
 
 
