@@ -240,9 +240,9 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
 # Additional feature: profile page where user is able to top up cash and change password.
-@app.route("/profile")
+@app.route("/profile", methods=["GET", "POST"])
 @login_required
-def index():
+ def profile():
     """Show portfolio of stocks"""
     uid = session["user_id"]
 
