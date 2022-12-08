@@ -6,7 +6,7 @@
 
 {% block main %}
 
-<h5>
+<p style="text-align:left">
 {% for data in userdata %}
         <tr>
             Username: {{ data["username"]}}
@@ -14,15 +14,16 @@
         </tr>
 
         {% endfor %}
-</h5>
+</p>
 
+<p style="text-align:left">
 {% for data in userdata %}
         <tr>
-            Cash: {{ usd(data["cash"])}}
+            Available cash: {{ usd(data["cash"])}}
         </tr>
 
         {% endfor %}
-</h5>
+</p>
 
 
 <table class="table table-striped">
