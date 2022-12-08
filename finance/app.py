@@ -246,13 +246,13 @@ def sell():
     """Show portfolio of stocks"""
     uid = session["user_id"]
 
-    stocks = db.execute(
+    stocks2 = db.execute(
         "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
     cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
     total = cash
-    for stock in stocks:
-        total += stock["price"]*stock["totalShares"]
+    for stock2 in stocks2:
+        total += stock2["price"]*stock2["totalShares"]
 
-    return render_template("profile.html", stocks=stocks, cash=usd(cash), total=usd(total), usd=usd)
+    return render_template("profile.html", stocks2=stocks2, cash=usd(cash), total=usd(total), usd=usd)
 
 
