@@ -8,24 +8,19 @@
 
 <p style="text-align:left">
 {% for data in userdata %}
-        <tr>
-            Username: {{ data["username"]}}
 
-        </tr>
+            Username: {{ data["username"]}}
 
         {% endfor %}
 </p>
 
 <p style="text-align:left">
-<td>
+
 {% for data in userdata %}
-        <tr>
+
             Available cash: {{ usd(data["cash"])}}
-        </tr>
 
 {% endfor %}
-</td>
-<td><button class="btn btn-primary" type="submit">Top-up cash</button></td>
 
 </p>
 
