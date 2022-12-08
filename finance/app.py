@@ -237,7 +237,7 @@ def sell():
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
         return render_template("sell.html", symbols=symbols)
 
-Additional feature: profile page where user is able to top up cash and change password.
+# Additional feature: profile page where user is able to top up cash and change password.
 @app.route("/profile", methods=["GET", "POST"])
 @login_required
 def profile():
