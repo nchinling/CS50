@@ -203,7 +203,7 @@ def register():
 
     else:
         return render_template("register.html")
-   
+
 
 
 @app.route("/sell", methods=["GET", "POST"])
