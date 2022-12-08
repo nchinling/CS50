@@ -17,13 +17,16 @@
 </p>
 
 <p style="text-align:left">
+<td>
 {% for data in userdata %}
         <tr>
             Available cash: {{ usd(data["cash"])}}
         </tr>
 
 {% endfor %}
-<button class="btn btn-primary" type="submit">Top-up cash</button>
+</td>
+<td margin=""><button class="btn btn-primary" type="submit">Top-up cash</button></td>
+
 </p>
 
 
