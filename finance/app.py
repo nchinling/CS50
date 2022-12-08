@@ -252,6 +252,8 @@ def profile():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + sold_amount, uid)
 
 
     else:
