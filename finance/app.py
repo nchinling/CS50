@@ -235,7 +235,6 @@ def sell():
         return redirect("/")
 
     else:
-
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id =? GROUP BY symbol", uid)
         return render_template("sell.html", symbols=symbols)
 
