@@ -30,9 +30,6 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
-uid = session["user_id"]
-username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
-session["username"] = username
 
 @app.after_request
 def after_request(response):
@@ -138,6 +135,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
+        session["username"] = rows[0]["username"]
 
         # Redirect user to home page
         return redirect("/")
