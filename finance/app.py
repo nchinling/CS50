@@ -30,6 +30,9 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
+uid = session["user_id"]
+username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
+session["username"] = username
 
 @app.after_request
 def after_request(response):
