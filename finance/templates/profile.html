@@ -6,7 +6,19 @@
 
 {% block main %}
 
-<h3>{{ userdata }} </h3>
+<h5>
+{% for data in userdata %}
+        <tr>
+            Username: {{ data["username"]}}
+
+        </tr>
+        <tr>
+            Cash: {{ usd(data["cash"])}}
+        </tr>
+
+        {% endfor %}
+</h5>
+
 <h3>{{ username }} </h3>
 <table class="table table-striped">
     <thead>
