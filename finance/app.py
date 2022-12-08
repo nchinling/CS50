@@ -248,6 +248,9 @@ def sell():
 def profile():
     """Show portfolio of stocks"""
     uid = session["user_id"]
+    
+    if request.method == "POST":
+        return redirect("/top-up")
 
     username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
 
@@ -264,4 +267,6 @@ def profile():
 
     return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
 
+    if request.method == "POST":
+        return redirect("/top-up")
 
