@@ -246,9 +246,9 @@ def profile():
     """Show portfolio of stocks"""
     uid = session["user_id"]
 
-    userdata = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
+    username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
 
-     stocks = db.execute(
+    userdatas = db.execute(
         "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
 
     stocks = db.execute(
@@ -259,6 +259,6 @@ def profile():
     for stock in stocks:
         total += stock["price"]*stock["totalShares"]
 
-    return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, userdata=userdata)
+    return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
 
 
