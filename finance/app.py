@@ -254,6 +254,7 @@ def profile():
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
         db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + topup, uid)
+        return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
 
 
     else:
