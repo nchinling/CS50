@@ -240,19 +240,19 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
 # Additional feature: profile page where user is able to top up cash and change password.
-# @app.route("/profile")
-# @login_required
-# def index():
-#     """Show portfolio of stocks"""
-#     uid = session["user_id"]
+@app.route("/profile")
+@login_required
+def index():
+    """Show portfolio of stocks"""
+    uid = session["user_id"]
 
-#     stocks = db.execute(
-#         "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
-#     cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
-#     total = cash
-#     for stock in stocks:
-#         total += stock["price"]*stock["totalShares"]
+    stocks = db.execute(
+        "SELECT symbol, name, price, SUM(shares) as totalShares FROM transactions WHERE user_id = ? GROUP BY symbol", uid)
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+    total = cash
+    for stock in stocks:
+        total += stock["price"]*stock["totalShares"]
 
-#     return render_template("index.html", stocks=stocks, cash=usd(cash), total=usd(total), usd=usd)
+    return render_template("profile.html", stocks=stocks, cash=usd(cash), total=usd(total), usd=usd)
 
 
