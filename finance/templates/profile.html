@@ -6,15 +6,20 @@
 
 {% block main %}
 
-<p style="text-align:left">
+<table>
+
+<tr>
+<td style="text-align:left">
 {% for data in userdata %}
 
             Username: {{ data["username"]}}
 
         {% endfor %}
-</p>
+</td>
+</tr>
 
-<p style="text-align:left">
+<tr>
+<td style="text-align:left">
 
 {% for data in userdata %}
 
@@ -22,8 +27,11 @@
 
 {% endfor %}
 
-</p>
-
+</td>
+<td colspan="3"><button class="btn btn-primary" type="submit">Top-up cash</button></td>
+<td><button class="btn btn-primary" type="submit">Top-up cash</button></td>
+</tr>
+</table>
 
 <table class="table table-striped">
     <thead>
