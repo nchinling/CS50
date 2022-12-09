@@ -136,9 +136,8 @@ def login():
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
-        #to display username at layout page
+        # to display username at layout page
         session["user"] = rows[0]["username"]
-
 
         # Redirect user to home page
         return redirect("/")
@@ -210,7 +209,6 @@ def register():
         return render_template("register.html")
 
 
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
@@ -227,7 +225,8 @@ def sell():
         stock_name = lookup(symbol)["name"]
         sold_amount = shares * stock_price
 
-        available_shares = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
+        available_shares = db.execute
+            ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
 
         if available_shares < shares:
             return apology("You don't own enough shares")
@@ -243,6 +242,8 @@ def sell():
         return render_template("sell.html", symbols=symbols)
 
 # Additional feature: profile page where user is able to top up cash
+
+
 @app.route("/profile", methods=["GET", "POST"])
 @login_required
 def profile():
