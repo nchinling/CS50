@@ -252,7 +252,7 @@ def profile():
     if request.method == "POST":
         topup = float(request.form.get("topup"))
 
-        available_cash = db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"]
+        available_cash = float(db.execute("SELECT cash FROM users WHERE id = ?", uid)[0]["cash"])
         db.execute("UPDATE users SET cash = ? WHERE id = ?", available_cash + topup, uid)
         return redirect("/profile")
 
