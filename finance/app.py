@@ -226,7 +226,7 @@ def sell():
         sold_amount = shares * stock_price
 
         available_shares = db.execute
-            ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
+        ("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", uid, symbol)[0]["shares"]
 
         if available_shares < shares:
             return apology("You don't own enough shares")
@@ -257,7 +257,6 @@ def profile():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", available_cash + topup, uid)
         return redirect("/profile")
 
-
     else:
         username = db.execute("SELECT username FROM users WHERE id = ?", uid)[0]["username"]
 
@@ -273,6 +272,3 @@ def profile():
             total += stock["price"]*stock["totalShares"]
 
         return render_template("profile.html", stocks2=stocks, cash=usd(cash), total=usd(total), usd=usd, username=username, userdata=userdata)
-
-
-
